@@ -314,7 +314,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #ffffff;
+            background: #f8f9fa;
             min-height: 100vh;
             padding: 2rem;
         }
@@ -327,28 +327,25 @@
         .header {
             text-align: center;
             margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid #f8f9fa;
         }
         
         .header h1 {
-            color: #1a1a1a;
+            color: #2c3e50;
             font-size: 3rem;
-            font-weight: 400;
+            font-weight: 300;
             margin-bottom: 0.5rem;
-            letter-spacing: -1px;
+            text-shadow: none;
         }
         
         .header p {
-            color: #666666;
+            color: #6c757d;
             font-size: 1.2rem;
-            font-weight: 300;
         }
         
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 2px;
+            gap: 0;
             margin-bottom: 2rem;
             width: 100%;
         }
@@ -370,9 +367,8 @@
         }
         
         .grid-item:hover {
-            transform: translateY(-2px);
+            transform: scale(1.02);
             z-index: 1;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
         }
         
         .grid-item.featured {
@@ -380,12 +376,12 @@
             min-height: 600px;
         }
         
-        .grid-item.color-1 { background: #2c3e50; }
-        .grid-item.color-2 { background: #34495e; }
-        .grid-item.color-3 { background: #7f8c8d; }
-        .grid-item.color-4 { background: #95a5a6; }
-        .grid-item.color-5 { background: #bdc3c7; color: #2c3e50; }
-        .grid-item.color-6 { background: #ecf0f1; color: #2c3e50; }
+        .grid-item.color-1 { background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); }
+        .grid-item.color-2 { background: linear-gradient(135deg, #00cec9 0%, #0984e3 100%); }
+        .grid-item.color-3 { background: linear-gradient(135deg, #fd79a8 0%, #e17055 100%); }
+        .grid-item.color-4 { background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%); }
+        .grid-item.color-5 { background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%); }
+        .grid-item.color-6 { background: linear-gradient(135deg, #00b894 0%, #00cec9 100%); }
         
         .grid-item-image {
             position: absolute;
@@ -396,10 +392,9 @@
             background-size: cover;
             background-position: center;
             opacity: 0.8;
-            filter: grayscale(20%);
         }
         
-        /* Add gradient overlay for text readability */
+        /* Add a gradient overlay for better text readability */
         .grid-item-image::after {
             content: '';
             position: absolute;
@@ -407,7 +402,7 @@
             left: 0;
             right: 0;
             height: 70%;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            background: linear-gradient(transparent, rgba(0,0,0,0.6));
             z-index: 1;
         }
         
@@ -419,10 +414,9 @@
         .grid-item h2 {
             font-size: 1.6rem;
             margin-bottom: 0.5rem;
-            font-weight: 300;
+            font-weight: 600;
             line-height: 1.2;
-            letter-spacing: -0.5px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
         
         .grid-item.featured h2 {
@@ -434,45 +428,38 @@
             opacity: 0.9;
             margin-bottom: 1rem;
             line-height: 1.4;
-            font-weight: 300;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
         }
         
         .grid-item .date {
-            font-size: 0.8rem;
-            opacity: 0.7;
+            font-size: 0.9rem;
+            opacity: 0.8;
             font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
         }
         
         .no-pages {
             text-align: center;
             padding: 4rem 2rem;
-            color: #999999;
+            color: #6c757d;
             font-size: 1.2rem;
         }
         
         .footer {
             text-align: center;
-            color: #999999;
+            color: #6c757d;
             font-size: 1.1rem;
-            margin-top: 4rem;
+            margin-top: 3rem;
             font-style: italic;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.4;
-            padding-top: 2rem;
-            border-top: 1px solid #f0f0f0;
-            font-weight: 300;
         }
         
         @media (max-width: 768px) {
             .grid {
                 grid-template-columns: 1fr;
-                gap: 1px;
             }
             
             .grid-item.featured {
@@ -650,7 +637,7 @@
         </div>
         
         <div class="footer">
-            "The desire for more positive experience is itself a negative experience." — Mark Manson
+            "Attitude, not aptitude, determines altitude.  " — Zig Ziglar
         </div>
     </div>
 </body>
