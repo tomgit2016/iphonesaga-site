@@ -11,74 +11,68 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://iphonesaga.com/Top_Free_Apps.html</loc>
-    <lastmod>2025-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://iphonesaga.com/Top_TV_Seasons.html</loc>
-    <lastmod>2025-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://iphonesaga.com/Top_Albums.html</loc>
-    <lastmod>2025-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://iphonesaga.com/Top_Audio_Books.html</loc>
-    <lastmod>2025-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://iphonesaga.com/Top_Music_Videos.html</loc>
-    <lastmod>2025-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://iphonesaga.com/Top_Free_Mac_Apps.html</loc>
-    <lastmod>2025-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://iphonesaga.com/Top_Ebooks.html</loc>
-    <lastmod>2025-09-09</lastmod>
+    <loc>https://iphonesaga.com/Top_Podcasts.html</loc>
+    <lastmod>2025-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/Top_Songs.html</loc>
-    <lastmod>2025-09-09</lastmod>
+    <lastmod>2025-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/Top_Paid_Apps.html</loc>
-    <lastmod>2025-09-09</lastmod>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iphonesaga.com/Top_Free_Mac_Apps.html</loc>
+    <lastmod>2025-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/Top_TV_Episodes.html</loc>
-    <lastmod>2025-09-09</lastmod>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iphonesaga.com/Top_Audio_Books.html</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iphonesaga.com/Top_Free_Apps.html</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iphonesaga.com/Top_TV_Seasons.html</loc>
+    <lastmod>2025-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/Top_Movie.html</loc>
-    <lastmod>2025-09-09</lastmod>
+    <lastmod>2025-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://iphonesaga.com/Top_Podcasts.html</loc>
-    <lastmod>2025-09-09</lastmod>
+    <loc>https://iphonesaga.com/Top_Albums.html</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iphonesaga.com/Top Music Videos.html</loc>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
