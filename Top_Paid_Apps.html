@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNE8SZ627F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CNE8SZ627F');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="public, max-age=3600">
     <meta http-equiv="Expires" content="3600">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iTunes RSS Content</title>
+    <title>Itunes Store: Top Paid Apps - September 09, 2025</title>
     <style>
 /* Reset and base styles */
 * {
@@ -23,22 +32,117 @@ body {
 
 /* Header styles */
 .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a73e8 0%, #3c6ae2 100%);
     color: white;
     padding: 2rem 1rem;
     text-align: center;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
+
 
 .header h1 {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.header-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    flex-shrink: 0;
+}
+
+/* Header content layout */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-main {
+    text-align: center;
+}
+
+.subtitle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.25rem;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+}
+
+/* More Trends Button */
+.header-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.more-trends-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.more-trends-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.more-trends-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn-icon {
+    font-size: 0.9rem;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.btn-text {
+    letter-spacing: 0.2px;
+    font-size: 0.75rem;
 }
 
 /* Main content */
@@ -172,8 +276,37 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    .header {
+        padding: 1.8rem 1rem;
+        margin-bottom: 1.8rem;
+    }
+    
     .header h1 {
         font-size: 2rem;
+        gap: 0.6rem;
+    }
+    
+    .header-icon {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .subtitle-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .more-trends-btn {
+        padding: 0.45rem 0.8rem;
+        font-size: 0.75rem;
+        gap: 0.3rem;
+    }
+    
+    .btn-text {
+        font-size: 0.7rem;
     }
     
     .content-grid {
@@ -192,11 +325,42 @@ body {
 
 @media (max-width: 480px) {
     .header {
-        padding: 1.5rem 0.5rem;
+        padding: 1.5rem 0.8rem;
     }
     
     .header h1 {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+        letter-spacing: -0.3px;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+    
+    .header-icon {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .subtitle-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .more-trends-btn {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.7rem;
+        gap: 0.25rem;
+        border-radius: 16px;
+    }
+    
+    .btn-icon {
+        font-size: 0.8rem;
+    }
+    
+    .btn-text {
+        font-size: 0.65rem;
     }
     
     .item-content {
@@ -220,14 +384,25 @@ body {
 </head>
 <body>
     <header class="header">
-        <h1>iTunes RSS Content</h1>
-        <p class="subtitle">20 items across 1 categories</p>
+        <div class="header-content">
+            <div class="header-main">
+                <h1><span class="header-icon">📱</span>Itunes Store: Top Paid Apps</h1>
+                <div class="subtitle-container">
+                    <p class="subtitle">Updated on September 09, 2025</p>
+                    <div class="header-button-container">
+                        <a href="index.html" class="more-trends-btn" title="View all iTunes trends and charts">
+                            <span class="btn-icon">📊</span>
+                            <span class="btn-text">More Trends</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     
     <main class="main-content">
         
         <section class="category-section">
-            <h2 class="category-title">Itunes Store: Top Paid Apps</h2>
             <div class="content-grid">
                 
                 <article class="content-item">
@@ -258,39 +433,6 @@ body {
                             
                             
                             <span class="meta-date">2011-11-17</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/heads-up/id623592465?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/07/ae/6c/07ae6c0a-8c26-073a-79bb-02579730640a/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/300x300bb.png" 
-                                 alt="Heads Up!" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/heads-up/id623592465?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Heads Up!
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Warner Bros.</p>
-                        
-                        <p class="item-description">It's the game The New York Times called a "Sensation!" and Cosmopolitan raved “Your existence is dull and meaningless without this life-changing app!”...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Games</span>
-                            
-                            
-                            <span class="meta-price">$1.99</span>
-                            
-                            
-                            <span class="meta-date">2013-05-02</span>
                             
                         </div>
                     </div>
@@ -364,32 +506,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/geometry-dash/id625334537?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/a1/b1/87a1b173-cc9e-b506-c387-9faccdbb523e/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/300x300bb.png" 
-                                 alt="Geometry Dash" 
+                        <a href="https://apps.apple.com/us/app/backyard-football-99/id6740349855?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/22/d8/03/22d8037a-11df-3073-fbe5-f30e2f2018df/AppIcon-1x_U007epad-0-1-85-220-0.png/300x300bb.png" 
+                                 alt="Backyard Football '99" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/geometry-dash/id625334537?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Geometry Dash
+                            <a href="https://apps.apple.com/us/app/backyard-football-99/id6740349855?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Backyard Football '99
                             </a>
                         </h3>
                         
-                        <p class="item-artist">RobTop Games AB</p>
+                        <p class="item-artist">Playground Productions LLC</p>
                         
-                        <p class="item-description">Jump and fly your way through danger in this rhythm-based action platformer! "Frustratingly wonderful" - Kotaku "Geometry Dash provides all of the cha...</p>
+                        <p class="item-description">HUDDLE UP FOR BACKYARD FOOTBALL Backyard Football 1999 is now enhanced to run on modern systems. Whether you're picking Jerry Rice or Barry Sanders fo...</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">Games</span>
                             
                             
-                            <span class="meta-price">$2.99</span>
+                            <span class="meta-price">$4.99</span>
                             
                             
-                            <span class="meta-date">2013-08-13</span>
+                            <span class="meta-date">2025-09-08</span>
                             
                         </div>
                     </div>
@@ -397,32 +539,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/balatro/id6502453075?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6d/d3/0c/6dd30caf-f830-22d5-ba44-448cdff0df30/iOS_AppIcon_Premium-0-0-1x_U007epad-0-1-85-220.png/300x300bb.png" 
-                                 alt="Balatro" 
+                        <a href="https://apps.apple.com/us/app/heads-up/id623592465?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/07/ae/6c/07ae6c0a-8c26-073a-79bb-02579730640a/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/300x300bb.png" 
+                                 alt="Heads Up!" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/balatro/id6502453075?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Balatro
+                            <a href="https://apps.apple.com/us/app/heads-up/id623592465?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Heads Up!
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Playstack Ltd</p>
+                        <p class="item-artist">Warner Bros.</p>
                         
-                        <p class="item-description">Welcome to the official Balatro mobile game! Hypnotic and endlessly satisfying, Balatro is a magical mix of card games like Solitaire and Poker, that ...</p>
+                        <p class="item-description">It's the game The New York Times called a "Sensation!" and Cosmopolitan raved “Your existence is dull and meaningless without this life-changing app!”...</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">Games</span>
                             
                             
-                            <span class="meta-price">$9.99</span>
+                            <span class="meta-price">$1.99</span>
                             
                             
-                            <span class="meta-date">2024-09-26</span>
+                            <span class="meta-date">2013-05-02</span>
                             
                         </div>
                     </div>
@@ -463,6 +605,72 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/balatro/id6502453075?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6d/d3/0c/6dd30caf-f830-22d5-ba44-448cdff0df30/iOS_AppIcon_Premium-0-0-1x_U007epad-0-1-85-220.png/300x300bb.png" 
+                                 alt="Balatro" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/balatro/id6502453075?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Balatro
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Playstack Ltd</p>
+                        
+                        <p class="item-description">Welcome to the official Balatro mobile game! Hypnotic and endlessly satisfying, Balatro is a magical mix of card games like Solitaire and Poker, that ...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Games</span>
+                            
+                            
+                            <span class="meta-price">$9.99</span>
+                            
+                            
+                            <span class="meta-date">2024-09-26</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/geometry-dash/id625334537?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/87/a1/b1/87a1b173-cc9e-b506-c387-9faccdbb523e/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/300x300bb.png" 
+                                 alt="Geometry Dash" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/geometry-dash/id625334537?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Geometry Dash
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">RobTop Games AB</p>
+                        
+                        <p class="item-description">Jump and fly your way through danger in this rhythm-based action platformer! "Frustratingly wonderful" - Kotaku "Geometry Dash provides all of the cha...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Games</span>
+                            
+                            
+                            <span class="meta-price">$2.99</span>
+                            
+                            
+                            <span class="meta-date">2013-08-13</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
                         <a href="https://apps.apple.com/us/app/shadowrocket/id932747118?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
                             <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/be/0e/ec/be0eecda-9042-7bdd-b720-8e89ceb0dcf7/AppIcon-0-0-1x_U007epad-0-1-85-220.png/300x300bb.png" 
                                  alt="Shadowrocket" 
@@ -496,6 +704,39 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/ankimobile-flashcards/id373493387?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/30/6b/da/306bdac5-3088-c97f-c682-e4626bfc6b43/AppIcon-0-0-1x_U007emarketing-0-5-0-85-220.png/300x300bb.png" 
+                                 alt="AnkiMobile Flashcards" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/ankimobile-flashcards/id373493387?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                AnkiMobile Flashcards
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Ankitects Pty Ltd</p>
+                        
+                        <p class="item-description">AnkiMobile is a mobile companion to Anki®, a powerful, intelligent flashcard program that is free, multi-platform, and open-source. Sales of this app ...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Education</span>
+                            
+                            
+                            <span class="meta-price">$24.99</span>
+                            
+                            
+                            <span class="meta-date">2010-05-26</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
                         <a href="https://apps.apple.com/us/app/bloons-td-6/id1118115766?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
                             <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/07/c6/45/07c64541-e045-3701-35f6-57f3b4c1b94e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/300x300bb.png" 
                                  alt="Bloons TD 6" 
@@ -522,72 +763,6 @@ body {
                             
                             
                             <span class="meta-date">2018-06-14</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/papas-freezeria-to-go/id824305459?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/44/d1/bb/44d1bb03-8871-ff83-c212-5c55b0f335a6/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-6.png/300x300bb.png" 
-                                 alt="Papa's Freezeria To Go!" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/papas-freezeria-to-go/id824305459?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Papa's Freezeria To Go!
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Flipline Studios</p>
-                        
-                        <p class="item-description">Build and serve sundaes on the go with this brand-new version of Papa's Freezeria, with gameplay and controls reimagined for iPhone and iPod Touch! Yo...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Games</span>
-                            
-                            
-                            <span class="meta-price">$0.99</span>
-                            
-                            
-                            <span class="meta-date">2014-02-26</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/ankimobile-flashcards/id373493387?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c2/f1/74/c2f17421-449c-cd04-0bab-dacd381c1d75/AppIcon-0-0-1x_U007emarketing-0-5-0-85-220.png/300x300bb.png" 
-                                 alt="AnkiMobile Flashcards" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/ankimobile-flashcards/id373493387?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                AnkiMobile Flashcards
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Ankitects Pty Ltd</p>
-                        
-                        <p class="item-description">AnkiMobile is a mobile companion to Anki®, a powerful, intelligent flashcard program that is free, multi-platform, and open-source. Sales of this app ...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Education</span>
-                            
-                            
-                            <span class="meta-price">$24.99</span>
-                            
-                            
-                            <span class="meta-date">2010-05-26</span>
                             
                         </div>
                     </div>
@@ -661,32 +836,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/monopoly-the-board-game/id1477966166?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c9/c7/1b/c9c71b3d-7aa8-ff0f-ef51-a039ef06eeec/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/300x300bb.png" 
-                                 alt="MONOPOLY: The Board Game" 
+                        <a href="https://apps.apple.com/us/app/papas-freezeria-to-go/id824305459?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/44/d1/bb/44d1bb03-8871-ff83-c212-5c55b0f335a6/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-6.png/300x300bb.png" 
+                                 alt="Papa's Freezeria To Go!" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/monopoly-the-board-game/id1477966166?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                MONOPOLY: The Board Game
+                            <a href="https://apps.apple.com/us/app/papas-freezeria-to-go/id824305459?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Papa's Freezeria To Go!
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Marmalade Game Studio</p>
+                        <p class="item-artist">Flipline Studios</p>
                         
-                        <p class="item-description">Play MONOPOLY on the go without distractions – no ads, no fuss! Challenge friends, family and fans from around the globe in the digital version of the...</p>
+                        <p class="item-description">Build and serve sundaes on the go with this brand-new version of Papa's Freezeria, with gameplay and controls reimagined for iPhone and iPod Touch! Yo...</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">Games</span>
                             
                             
-                            <span class="meta-price">$4.99</span>
+                            <span class="meta-price">$0.99</span>
                             
                             
-                            <span class="meta-date">2019-12-04</span>
+                            <span class="meta-date">2014-02-26</span>
                             
                         </div>
                     </div>
@@ -720,6 +895,39 @@ body {
                             
                             
                             <span class="meta-date">2014-12-17</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/monopoly-the-board-game/id1477966166?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c9/c7/1b/c9c71b3d-7aa8-ff0f-ef51-a039ef06eeec/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/300x300bb.png" 
+                                 alt="MONOPOLY: The Board Game" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/monopoly-the-board-game/id1477966166?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                MONOPOLY: The Board Game
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Marmalade Game Studio</p>
+                        
+                        <p class="item-description">Play MONOPOLY on the go without distractions – no ads, no fuss! Challenge friends, family and fans from around the globe in the digital version of the...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Games</span>
+                            
+                            
+                            <span class="meta-price">$4.99</span>
+                            
+                            
+                            <span class="meta-date">2019-12-04</span>
                             
                         </div>
                     </div>
@@ -793,6 +1001,39 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/tonalenergy-tuner-metronome/id497716362?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/86/04/26/860426c4-f935-611d-a734-cfb1b93aafc5/AppIcon-0-0-1x_U007emarketing-0-10-0-0-85-220.png/300x300bb.png" 
+                                 alt="TonalEnergy Tuner & Metronome" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/tonalenergy-tuner-metronome/id497716362?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                TonalEnergy Tuner & Metronome
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">TonalEnergy, Inc</p>
+                        
+                        <p class="item-description">For musicians from pros to beginners, whether you sing, play a brass, woodwind or stringed instrument or any type of guitar, this app provides a set o...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Music</span>
+                            
+                            
+                            <span class="meta-price">$5.99</span>
+                            
+                            
+                            <span class="meta-date">2012-02-17</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
                         <a href="https://apps.apple.com/us/app/five-nights-at-freddys/id912536422?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
                             <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9b/77/03/9b77034f-5ade-ddf5-9c2d-48fd8a546c62/AppIcon-1x_U007epad-0-85-220-0.png/300x300bb.png" 
                                  alt="Five Nights at Freddy's" 
@@ -819,72 +1060,6 @@ body {
                             
                             
                             <span class="meta-date">2014-09-11</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/imo-video-calls-and-chat-hd/id1400579543?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/39/61/bc/3961bc14-ae36-7369-36b1-9223e9279f00/AppIcon-0-0-1x_U007emarketing-0-4-0-85-220.png/300x300bb.png" 
-                                 alt="imo video calls and chat HD" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/imo-video-calls-and-chat-hd/id1400579543?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                imo video calls and chat HD
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Baby Penguin</p>
-                        
-                        <p class="item-description">Message and video chat with your friends and family for FREE, no matter what device they are on! - Encrypted high-quality Video and Voice calls - Encr...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Social Networking</span>
-                            
-                            
-                            <span class="meta-price">$4.99</span>
-                            
-                            
-                            <span class="meta-date">2018-09-02</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/paprika-recipe-manager-3/id1303222868?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c7/5c/bd/c75cbd0e-7fad-1a5d-035f-826fb238db37/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/300x300bb.png" 
-                                 alt="Paprika Recipe Manager 3" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/paprika-recipe-manager-3/id1303222868?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Paprika Recipe Manager 3
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Hindsight Labs LLC</p>
-                        
-                        <p class="item-description">Organize your recipes. Create grocery lists. Plan your meals. Download recipes from your favorite websites. Seamlessly sync to all your devices. Featu...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Food & Drink</span>
-                            
-                            
-                            <span class="meta-price">$4.99</span>
-                            
-                            
-                            <span class="meta-date">2017-11-15</span>
                             
                         </div>
                     </div>

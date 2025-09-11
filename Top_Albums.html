@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNE8SZ627F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CNE8SZ627F');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="public, max-age=3600">
     <meta http-equiv="Expires" content="3600">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iTunes RSS Content</title>
+    <title>Itunes Store: Top Albums - September 09, 2025</title>
     <style>
 /* Reset and base styles */
 * {
@@ -23,22 +32,117 @@ body {
 
 /* Header styles */
 .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a73e8 0%, #3c6ae2 100%);
     color: white;
     padding: 2rem 1rem;
     text-align: center;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
+
 
 .header h1 {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.header-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    flex-shrink: 0;
+}
+
+/* Header content layout */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-main {
+    text-align: center;
+}
+
+.subtitle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.25rem;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+}
+
+/* More Trends Button */
+.header-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.more-trends-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.more-trends-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.more-trends-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn-icon {
+    font-size: 0.9rem;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.btn-text {
+    letter-spacing: 0.2px;
+    font-size: 0.75rem;
 }
 
 /* Main content */
@@ -172,8 +276,37 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    .header {
+        padding: 1.8rem 1rem;
+        margin-bottom: 1.8rem;
+    }
+    
     .header h1 {
         font-size: 2rem;
+        gap: 0.6rem;
+    }
+    
+    .header-icon {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .subtitle-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .more-trends-btn {
+        padding: 0.45rem 0.8rem;
+        font-size: 0.75rem;
+        gap: 0.3rem;
+    }
+    
+    .btn-text {
+        font-size: 0.7rem;
     }
     
     .content-grid {
@@ -192,11 +325,42 @@ body {
 
 @media (max-width: 480px) {
     .header {
-        padding: 1.5rem 0.5rem;
+        padding: 1.5rem 0.8rem;
     }
     
     .header h1 {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+        letter-spacing: -0.3px;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+    
+    .header-icon {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .subtitle-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .more-trends-btn {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.7rem;
+        gap: 0.25rem;
+        border-radius: 16px;
+    }
+    
+    .btn-icon {
+        font-size: 0.8rem;
+    }
+    
+    .btn-text {
+        font-size: 0.65rem;
     }
     
     .item-content {
@@ -220,14 +384,25 @@ body {
 </head>
 <body>
     <header class="header">
-        <h1>iTunes RSS Content</h1>
-        <p class="subtitle">20 items across 1 categories</p>
+        <div class="header-content">
+            <div class="header-main">
+                <h1><span class="header-icon">📱</span>Itunes Store: Top Albums</h1>
+                <div class="subtitle-container">
+                    <p class="subtitle">Updated on September 09, 2025</p>
+                    <div class="header-button-container">
+                        <a href="index.html" class="more-trends-btn" title="View all iTunes trends and charts">
+                            <span class="btn-icon">📊</span>
+                            <span class="btn-text">More Trends</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     
     <main class="main-content">
         
         <section class="category-section">
-            <h2 class="category-title">Itunes Store: Top Albums</h2>
             <div class="content-grid">
                 
                 <article class="content-item">
@@ -281,16 +456,82 @@ body {
                         
                         <p class="item-artist">KPop Demon Hunters Cast, HUNTR/X & Saja Boys</p>
                         
-                        <p class="item-description">KPop Demon Hunters (Soundtrack from the Netflix Film / Deluxe Version) KPop Demon Hunters Cast, HUNTR/X &amp; Saja Boys Genre: K-Pop Price: $14.99 Rel...</p>
+                        <p class="item-description">KPop Demon Hunters (Soundtrack from the Netflix Film / Deluxe Version) KPop Demon Hunters Cast, HUNTR/X &amp; Saja Boys Genre: Soundtrack Price: $14.9...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">K-Pop</span>
+                            <span class="meta-genre">Soundtrack</span>
                             
                             
                             <span class="meta-price">$14.99</span>
                             
                             
                             <span class="meta-date">2025-09-05</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://music.apple.com/us/album/youll-be-alright-kid/1817735146?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c7/1e/c9/c71ec9f8-f6fd-5374-0e5c-3419539618f4/075679607942.jpg/300x300bb.png" 
+                                 alt="You'll Be Alright, Kid" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://music.apple.com/us/album/youll-be-alright-kid/1817735146?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                You'll Be Alright, Kid
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Alex Warren</p>
+                        
+                        <p class="item-description">You'll Be Alright, Kid Alex Warren Genre: Pop Price: $9.99 Release Date: July 18, 2025 &#169; ℗ 2025 Atlantic Recording Corporation</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Pop</span>
+                            
+                            
+                            <span class="meta-price">$9.99</span>
+                            
+                            
+                            <span class="meta-date">2025-07-18</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://music.apple.com/us/album/the-very-best-of-supertramp/1440756022?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/09/95/b3/0995b3e6-1dfd-7eed-e4fc-3ec7594c8fde/06UMGIM10542.rgb.jpg/300x300bb.png" 
+                                 alt="The Very Best of Supertramp" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://music.apple.com/us/album/the-very-best-of-supertramp/1440756022?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                The Very Best of Supertramp
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Supertramp</p>
+                        
+                        <p class="item-description">The Very Best of Supertramp Supertramp Genre: Rock Price: $10.99 Release Date: June 3, 1990 &#169; This Compilation ℗ 1990 A&amp;M Records</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Rock</span>
+                            
+                            
+                            <span class="meta-price">$10.99</span>
+                            
+                            
+                            <span class="meta-date">1990-06-03</span>
                             
                         </div>
                     </div>
@@ -324,6 +565,39 @@ body {
                             
                             
                             <span class="meta-date">2025-09-05</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://music.apple.com/us/album/breakfast-in-america-remastered/1440512054?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/10/bd/ee/10bdee2b-e13b-b1c2-b264-484e37f5208e/10UMGIM21523.rgb.jpg/300x300bb.png" 
+                                 alt="Breakfast In America (Remastered)" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://music.apple.com/us/album/breakfast-in-america-remastered/1440512054?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Breakfast In America (Remastered)
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Supertramp</p>
+                        
+                        <p class="item-description">Breakfast In America (Remastered) Supertramp Genre: Rock Price: $10.99 Release Date: March 16, 1979 &#169; ℗ 2010 A&amp;M Records</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Rock</span>
+                            
+                            
+                            <span class="meta-price">$10.99</span>
+                            
+                            
+                            <span class="meta-date">1979-03-16</span>
                             
                         </div>
                     </div>
@@ -397,6 +671,105 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
+                        <a href="https://music.apple.com/us/album/i-barely-know-her/1832087626?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/79/87/33/798733c3-e926-b1ef-435b-6a2dd7993171/093624827795.jpg/300x300bb.png" 
+                                 alt="I Barely Know Her" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://music.apple.com/us/album/i-barely-know-her/1832087626?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                I Barely Know Her
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">sombr</p>
+                        
+                        <p class="item-description">I Barely Know Her sombr Genre: Indie Rock Price: $9.99 Release Date: August 22, 2025 &#169; ℗ 2025 SMB Music LLC under exclusive license to Warner Rec...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Indie Rock</span>
+                            
+                            
+                            <span class="meta-price">$9.99</span>
+                            
+                            
+                            <span class="meta-date">2025-08-22</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://music.apple.com/us/album/taste-the-1st-album/1835578137?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/02/cd/71/02cd711c-e124-c33c-5893-842c2e02c6de/888735953354.png/300x300bb.png" 
+                                 alt="TASTE" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://music.apple.com/us/album/taste-the-1st-album/1835578137?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                TASTE
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">HAECHAN</p>
+                        
+                        <p class="item-description">TASTE - The 1st Album HAECHAN Genre: K-Pop Price: $8.99 Release Date: September 8, 2025 &#169; ℗ 2025 SM Entertainment</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">K-Pop</span>
+                            
+                            
+                            <span class="meta-price">$8.99</span>
+                            
+                            
+                            <span class="meta-date">2025-09-08</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://music.apple.com/us/album/whats-the-story-morning-glory/1517447039?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/04/92/e0/0492e08b-cbcc-9969-9ad6-8f5a0888068c/5051961007107.jpg/300x300bb.png" 
+                                 alt="(What's the Story) Morning Glory?" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://music.apple.com/us/album/whats-the-story-morning-glory/1517447039?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                (What's the Story) Morning Glory?
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Oasis</p>
+                        
+                        <p class="item-description">(What's the Story) Morning Glory? Oasis Genre: Indie Rock Price: $9.99 Release Date: October 2, 1995 &#169; ℗ 1995 Big Brother Recordings Ltd</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Indie Rock</span>
+                            
+                            
+                            <span class="meta-price">$9.99</span>
+                            
+                            
+                            <span class="meta-date">1995-10-02</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
                         <a href="https://music.apple.com/us/album/unfolded/1831900203?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
                             <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2b/26/e9/2b26e96d-0c7b-ae8a-5b9f-f78899bde813/artwork.jpg/300x300bb.png" 
                                  alt="Unfolded" 
@@ -423,105 +796,6 @@ body {
                             
                             
                             <span class="meta-date">2025-08-08</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://music.apple.com/us/album/legacy-the-creedence-clearwater-revival-years-johns/1814697485?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2e/89/c0/2e89c0f3-a94a-81a3-9617-24533a507ed0/25CRGIM49536.rgb.jpg/300x300bb.png" 
-                                 alt="Legacy: the Creedence Clearwater Revival years (John's Version)" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/legacy-the-creedence-clearwater-revival-years-johns/1814697485?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Legacy: the Creedence Clearwater Revival years (John's Version)
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">John Fogerty</p>
-                        
-                        <p class="item-description">Legacy: the Creedence Clearwater Revival years (John's Version) John Fogerty Genre: Rock Price: $11.99 Release Date: August 22, 2025 &#169; ℗ 2025 Joh...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Rock</span>
-                            
-                            
-                            <span class="meta-price">$11.99</span>
-                            
-                            
-                            <span class="meta-date">2025-08-22</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://music.apple.com/us/album/rich-man-the-6th-mini-album-ep/1833163982?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c5/ff/d7/c5ffd7a9-ed3c-6d02-81d7-7cc7e2dee419/888735953019_Cover.jpg/300x300bb.png" 
-                                 alt="Rich Man - The 6th Mini Album" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/rich-man-the-6th-mini-album-ep/1833163982?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Rich Man - The 6th Mini Album
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">aespa</p>
-                        
-                        <p class="item-description">Rich Man - The 6th Mini Album - EP aespa Genre: K-Pop Price: $5.99 Release Date: September 5, 2025 &#169; ℗ 2025 SM Entertainment</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">K-Pop</span>
-                            
-                            
-                            <span class="meta-price">$5.99</span>
-                            
-                            
-                            <span class="meta-date">2025-09-05</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://music.apple.com/us/album/dont-mind-if-i-do-deluxe/1832730457?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/19/0e/37/190e3722-515d-51de-33bd-b29c019e79fb/25BMR0007030.rgb.jpg/300x300bb.png" 
-                                 alt="Don't Mind If I Do (Deluxe)" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/dont-mind-if-i-do-deluxe/1832730457?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Don't Mind If I Do (Deluxe)
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Riley Green</p>
-                        
-                        <p class="item-description">Don't Mind If I Do (Deluxe) Riley Green Genre: Country Price: $14.99 Release Date: August 29, 2025 &#169; ℗ 2025 Nashville Harbor Records &amp; Entert...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Country</span>
-                            
-                            
-                            <span class="meta-price">$14.99</span>
-                            
-                            
-                            <span class="meta-date">2025-08-29</span>
                             
                         </div>
                     </div>
@@ -562,260 +836,29 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://music.apple.com/us/album/chronicle-the-20-greatest-hits/1440955595?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a1/47/ba/a147ba91-31cd-ef4d-d785-040036d14598/12CMGIM34362.rgb.jpg/300x300bb.png" 
-                                 alt="Chronicle: The 20 Greatest Hits" 
+                        <a href="https://music.apple.com/us/album/legacy-the-creedence-clearwater-revival-years-johns/1814697485?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2e/89/c0/2e89c0f3-a94a-81a3-9617-24533a507ed0/25CRGIM49536.rgb.jpg/300x300bb.png" 
+                                 alt="Legacy: the Creedence Clearwater Revival years (John's Version)" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/chronicle-the-20-greatest-hits/1440955595?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Chronicle: The 20 Greatest Hits
+                            <a href="https://music.apple.com/us/album/legacy-the-creedence-clearwater-revival-years-johns/1814697485?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Legacy: the Creedence Clearwater Revival years (John's Version)
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Creedence Clearwater Revival</p>
+                        <p class="item-artist">John Fogerty</p>
                         
-                        <p class="item-description">Chronicle: The 20 Greatest Hits Creedence Clearwater Revival Genre: Rock Price: $11.99 Release Date: January 1, 1976 &#169; This Compilation ℗ 2011 Co...</p>
+                        <p class="item-description">Legacy: the Creedence Clearwater Revival years (John's Version) John Fogerty Genre: Rock Price: $11.99 Release Date: August 22, 2025 &#169; ℗ 2025 Joh...</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">Rock</span>
                             
                             
                             <span class="meta-price">$11.99</span>
-                            
-                            
-                            <span class="meta-date">1976-01-01</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://music.apple.com/us/album/barbara/1816053981?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b1/eb/3c/b1eb3c27-ebf4-9dd6-09ec-60f85986b9bd/196873138435.jpg/300x300bb.png" 
-                                 alt="Barbara" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/barbara/1816053981?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Barbara
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Old Dominion</p>
-                        
-                        <p class="item-description">Barbara Old Dominion Genre: Country Price: $11.99 Release Date: August 22, 2025 &#169; ℗ 2025 Three Up Three Down, LLC, under exclusive license to Son...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Country</span>
-                            
-                            
-                            <span class="meta-price">$11.99</span>
-                            
-                            
-                            <span class="meta-date">2025-08-22</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://music.apple.com/us/album/rumours/594061854?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/300x300bb.png" 
-                                 alt="Rumours" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/rumours/594061854?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Rumours
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Fleetwood Mac</p>
-                        
-                        <p class="item-description">Rumours Fleetwood Mac Genre: Rock Price: $10.99 Release Date: February 4, 1977 &#169; ℗ 2004 Warner Records Inc.</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Rock</span>
-                            
-                            
-                            <span class="meta-price">$10.99</span>
-                            
-                            
-                            <span class="meta-date">1977-02-04</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://music.apple.com/us/album/youll-be-alright-kid/1817735146?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c7/1e/c9/c71ec9f8-f6fd-5374-0e5c-3419539618f4/075679607942.jpg/300x300bb.png" 
-                                 alt="You'll Be Alright, Kid" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/youll-be-alright-kid/1817735146?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                You'll Be Alright, Kid
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Alex Warren</p>
-                        
-                        <p class="item-description">You'll Be Alright, Kid Alex Warren Genre: Pop Price: $9.99 Release Date: July 18, 2025 &#169; ℗ 2025 Atlantic Recording Corporation</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Pop</span>
-                            
-                            
-                            <span class="meta-price">$9.99</span>
-                            
-                            
-                            <span class="meta-date">2025-07-18</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://music.apple.com/us/album/psalm-in-blues/1834302387?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/82/06/d1/8206d170-d0b0-cb29-e846-e77ac8f04dee/artwork.jpg/300x300bb.png" 
-                                 alt="Psalm in Blues" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/psalm-in-blues/1834302387?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Psalm in Blues
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Holy Groove</p>
-                        
-                        <p class="item-description">Psalm in Blues Holy Groove Genre: Blues Price: $9.99 Release Date: August 15, 2025 &#169; ℗ 2025 10140107 Records DK</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Blues</span>
-                            
-                            
-                            <span class="meta-price">$9.99</span>
-                            
-                            
-                            <span class="meta-date">2025-08-15</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://music.apple.com/us/album/here-you-are/1816218430?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6a/f5/03/6af503d6-5f6f-3dcb-644b-37e884e53e4c/25UMGIM72590.rgb.jpg/300x300bb.png" 
-                                 alt="Here You Are" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/here-you-are/1816218430?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Here You Are
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Anne Murray</p>
-                        
-                        <p class="item-description">Here You Are Anne Murray Genre: Country Price: $9.99 Release Date: September 5, 2025 &#169; ℗ 2025 Universal Music Canada</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Country</span>
-                            
-                            
-                            <span class="meta-price">$9.99</span>
-                            
-                            
-                            <span class="meta-date">2025-09-05</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://music.apple.com/us/album/double-infinity/1813848690?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/40/40/53/404053dc-586e-f51c-8de9-446eef5af471/191400085077.png/300x300bb.png" 
-                                 alt="Double Infinity" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/double-infinity/1813848690?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Double Infinity
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Big Thief</p>
-                        
-                        <p class="item-description">Double Infinity Big Thief Genre: Alternative Price: $9.99 Release Date: September 5, 2025 &#169; ℗ 2025 Big Thief under exclusive license to 4AD Ltd</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Alternative</span>
-                            
-                            
-                            <span class="meta-price">$9.99</span>
-                            
-                            
-                            <span class="meta-date">2025-09-05</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://music.apple.com/us/album/mt-zion/1818407230?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ea/50/30/ea5030f4-9832-9ac8-1589-c55d5e370e27/25SYMIM20370.rgb.jpg/300x300bb.png" 
-                                 alt="Mt. Zion" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/mt-zion/1818407230?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Mt. Zion
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Josiah Queen</p>
-                        
-                        <p class="item-description">Mt. Zion Josiah Queen Genre: Christian Price: $9.99 Release Date: August 22, 2025 &#169; ℗ 2025 Josiah Queen Music</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Christian & Gospel</span>
-                            
-                            
-                            <span class="meta-price">$9.99</span>
                             
                             
                             <span class="meta-date">2025-08-22</span>
@@ -859,32 +902,164 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://music.apple.com/us/album/whats-the-story-morning-glory/1517447039?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/04/92/e0/0492e08b-cbcc-9969-9ad6-8f5a0888068c/5051961007107.jpg/300x300bb.png" 
-                                 alt="(What's the Story) Morning Glory?" 
+                        <a href="https://music.apple.com/us/album/king-of-hearts-full-deck-deluxe/1820018673?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/be/c5/a9/bec5a994-b837-3dbc-4d5e-3012efcd7cf8/196873259444.jpg/300x300bb.png" 
+                                 alt="King Of Hearts (Full Deck Deluxe)" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://music.apple.com/us/album/whats-the-story-morning-glory/1517447039?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                (What's the Story) Morning Glory?
+                            <a href="https://music.apple.com/us/album/king-of-hearts-full-deck-deluxe/1820018673?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                King Of Hearts (Full Deck Deluxe)
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Oasis</p>
+                        <p class="item-artist">Brandon Lake</p>
                         
-                        <p class="item-description">(What's the Story) Morning Glory? Oasis Genre: Indie Rock Price: $9.99 Release Date: October 2, 1995 &#169; ℗ 1995 Big Brother Recordings Ltd</p>
+                        <p class="item-description">King Of Hearts (Full Deck Deluxe) Brandon Lake Genre: Christian Price: $13.99 Release Date: June 16, 2025 &#169; ℗ 2025 Brandon Lake, under exclusive ...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Indie Rock</span>
+                            <span class="meta-genre">Christian & Gospel</span>
+                            
+                            
+                            <span class="meta-price">$13.99</span>
+                            
+                            
+                            <span class="meta-date">2025-06-16</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://music.apple.com/us/album/dont-mind-if-i-do-deluxe/1832730457?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/19/0e/37/190e3722-515d-51de-33bd-b29c019e79fb/25BMR0007030.rgb.jpg/300x300bb.png" 
+                                 alt="Don't Mind If I Do (Deluxe)" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://music.apple.com/us/album/dont-mind-if-i-do-deluxe/1832730457?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Don't Mind If I Do (Deluxe)
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Riley Green</p>
+                        
+                        <p class="item-description">Don't Mind If I Do (Deluxe) Riley Green Genre: Country Price: $14.99 Release Date: August 29, 2025 &#169; ℗ 2025 Nashville Harbor Records &amp; Entert...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Country</span>
+                            
+                            
+                            <span class="meta-price">$14.99</span>
+                            
+                            
+                            <span class="meta-date">2025-08-29</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://music.apple.com/us/album/reputation/1440933849?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ba/16/42/ba1642a8-0c75-a83d-3b9c-8c2eba140dc5/00843930033133.rgb.jpg/300x300bb.png" 
+                                 alt="reputation" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://music.apple.com/us/album/reputation/1440933849?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                reputation
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Taylor Swift</p>
+                        
+                        <p class="item-description">reputation Taylor Swift Genre: Pop Price: $9.99 Release Date: November 10, 2017 &#169; ℗ 2017 Taylor Swift</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Pop</span>
                             
                             
                             <span class="meta-price">$9.99</span>
                             
                             
-                            <span class="meta-date">1995-10-02</span>
+                            <span class="meta-date">2017-11-10</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://music.apple.com/us/album/color-outside-the-lines-ep/1832031331?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/b1/d0/07b1d01f-eada-50a5-bdf5-f3f86b1de566/198704622366_Cover.jpg/300x300bb.png" 
+                                 alt="COLOR OUTSIDE THE LINES" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://music.apple.com/us/album/color-outside-the-lines-ep/1832031331?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                COLOR OUTSIDE THE LINES
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">CORTIS</p>
+                        
+                        <p class="item-description">COLOR OUTSIDE THE LINES - EP CORTIS Genre: K-Pop Price: $5.99 Release Date: September 8, 2025 &#169; ℗ 2025 BIGHIT MUSIC</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">K-Pop</span>
+                            
+                            
+                            <span class="meta-price">$5.99</span>
+                            
+                            
+                            <span class="meta-date">2025-09-08</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://music.apple.com/us/album/greatest-hits-2024-remaster/169003304?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/2d/61/712d617d-f4a4-5904-1b11-d4b4b45c47c5/828768588925.jpg/300x300bb.png" 
+                                 alt="Greatest Hits (2024 Remaster)" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://music.apple.com/us/album/greatest-hits-2024-remaster/169003304?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Greatest Hits (2024 Remaster)
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Journey</p>
+                        
+                        <p class="item-description">Greatest Hits (2024 Remaster) Journey Genre: Rock Price: $10.99 Release Date: November 29, 1988 &#169; ℗ This compilation (P) 1988 Sony Music Entertai...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Rock</span>
+                            
+                            
+                            <span class="meta-price">$10.99</span>
+                            
+                            
+                            <span class="meta-date">1988-11-29</span>
                             
                         </div>
                     </div>

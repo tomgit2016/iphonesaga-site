@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNE8SZ627F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CNE8SZ627F');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="public, max-age=3600">
     <meta http-equiv="Expires" content="3600">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iTunes RSS Content</title>
+    <title>Itunes Store: Top Tv Seasons - September 10, 2025</title>
     <style>
 /* Reset and base styles */
 * {
@@ -23,22 +32,117 @@ body {
 
 /* Header styles */
 .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a73e8 0%, #3c6ae2 100%);
     color: white;
     padding: 2rem 1rem;
     text-align: center;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
+
 
 .header h1 {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.header-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    flex-shrink: 0;
+}
+
+/* Header content layout */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-main {
+    text-align: center;
+}
+
+.subtitle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.25rem;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+}
+
+/* More Trends Button */
+.header-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.more-trends-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.more-trends-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.more-trends-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn-icon {
+    font-size: 0.9rem;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.btn-text {
+    letter-spacing: 0.2px;
+    font-size: 0.75rem;
 }
 
 /* Main content */
@@ -172,8 +276,37 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    .header {
+        padding: 1.8rem 1rem;
+        margin-bottom: 1.8rem;
+    }
+    
     .header h1 {
         font-size: 2rem;
+        gap: 0.6rem;
+    }
+    
+    .header-icon {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .subtitle-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .more-trends-btn {
+        padding: 0.45rem 0.8rem;
+        font-size: 0.75rem;
+        gap: 0.3rem;
+    }
+    
+    .btn-text {
+        font-size: 0.7rem;
     }
     
     .content-grid {
@@ -192,11 +325,42 @@ body {
 
 @media (max-width: 480px) {
     .header {
-        padding: 1.5rem 0.5rem;
+        padding: 1.5rem 0.8rem;
     }
     
     .header h1 {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+        letter-spacing: -0.3px;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+    
+    .header-icon {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .subtitle-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .more-trends-btn {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.7rem;
+        gap: 0.25rem;
+        border-radius: 16px;
+    }
+    
+    .btn-icon {
+        font-size: 0.8rem;
+    }
+    
+    .btn-text {
+        font-size: 0.65rem;
     }
     
     .item-content {
@@ -220,15 +384,92 @@ body {
 </head>
 <body>
     <header class="header">
-        <h1>iTunes RSS Content</h1>
-        <p class="subtitle">20 items across 1 categories</p>
+        <div class="header-content">
+            <div class="header-main">
+                <h1><span class="header-icon">📱</span>Itunes Store: Top Tv Seasons</h1>
+                <div class="subtitle-container">
+                    <p class="subtitle">Updated on September 10, 2025</p>
+                    <div class="header-button-container">
+                        <a href="index.html" class="more-trends-btn" title="View all iTunes trends and charts">
+                            <span class="btn-icon">📊</span>
+                            <span class="btn-text">More Trends</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     
     <main class="main-content">
         
         <section class="category-section">
-            <h2 class="category-title">Itunes Store: Top Tv Seasons</h2>
             <div class="content-grid">
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://itunes.apple.com/us/tv-season/arrested-development-the-complete-series/id1313950547?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video118/v4/7e/5b/30/7e5b30ca-0f49-86bf-e24c-d9031e84c23e/mzl.wowrfdic.lsr/300x300bb.png" 
+                                 alt="Arrested Development, The Complete Series" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://itunes.apple.com/us/tv-season/arrested-development-the-complete-series/id1313950547?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Arrested Development, The Complete Series
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Arrested Development</p>
+                        
+                        <p class="item-description">Arrested Development, The Complete Series Arrested Development Genre: Comedy Price: $9.99 Release Date: November 2, 2003 &#169; © 2003 Twentieth Centu...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Comedy</span>
+                            
+                            
+                            <span class="meta-price">$9.99</span>
+                            
+                            
+                            <span class="meta-date">2003-11-02</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://itunes.apple.com/us/tv-season/m-a-s-h-the-complete-series/id1437658905?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video128/v4/2e/f7/86/2ef786e8-3328-4337-c43d-dc36a0bd98ee/mzl.rlcaenez.lsr/300x300bb.png" 
+                                 alt="M*A*S*H, The Complete Series" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://itunes.apple.com/us/tv-season/m-a-s-h-the-complete-series/id1437658905?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                M*A*S*H, The Complete Series
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">M*A*S*H</p>
+                        
+                        <p class="item-description">M*A*S*H, The Complete Series M*A*S*H Genre: Comedy Price: $29.99 Release Date: July 17, 1972 &#169; © 1972 Twentieth Century Fox Film Corporation. Ren...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Comedy</span>
+                            
+                            
+                            <span class="meta-price">$29.99</span>
+                            
+                            
+                            <span class="meta-date">1972-07-17</span>
+                            
+                        </div>
+                    </div>
+                </article>
                 
                 <article class="content-item">
                     <div class="item-image">
@@ -248,16 +489,214 @@ body {
                         
                         <p class="item-artist">The Chrisleys: Back to Reality</p>
                         
-                        <p class="item-description">The Chrisleys: Back to Reality, Season 1 The Chrisleys: Back to Reality Genre: Reality & Nonfiction Price: $11.96 Release Date: September 1, 2025 &#16...</p>
+                        <p class="item-description">The Chrisleys: Back to Reality, Season 1 The Chrisleys: Back to Reality Genre: Reality & Nonfiction Price: $17.94 Release Date: September 1, 2025 &#16...</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">Reality Tv</span>
                             
                             
-                            <span class="meta-price">$11.96</span>
+                            <span class="meta-price">$17.94</span>
                             
                             
                             <span class="meta-date">2025-09-01</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://itunes.apple.com/us/tv-season/breaking-bad-the-complete-series/id940287472?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video128/v4/a1/a8/5e/a1a85e21-5ed1-c2e0-8be7-96beff3c1976/mzl.sxwbonlr.lsr/300x300bb.png" 
+                                 alt="Breaking Bad: The Complete Series" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://itunes.apple.com/us/tv-season/breaking-bad-the-complete-series/id940287472?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Breaking Bad: The Complete Series
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Breaking Bad</p>
+                        
+                        <p class="item-description">Breaking Bad: The Complete Series Breaking Bad Genre: Drama Price: $29.99 Release Date: January 20, 2008 &#169; © 2013 Sony Pictures Television Inc. A...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Drama</span>
+                            
+                            
+                            <span class="meta-price">$29.99</span>
+                            
+                            
+                            <span class="meta-date">2008-01-20</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://itunes.apple.com/us/tv-season/the-walking-dead-daryl-dixon-season-3/id1835488097?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a3/94/6a/a3946a27-e831-0fbe-5a12-dd030b1c73cf/AMC_DD_S3_Launch_iTunes_3000x3000.png/300x300bb.png" 
+                                 alt="The Walking Dead: Daryl Dixon, Season 3" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://itunes.apple.com/us/tv-season/the-walking-dead-daryl-dixon-season-3/id1835488097?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                The Walking Dead: Daryl Dixon, Season 3
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">The Walking Dead: Daryl Dixon</p>
+                        
+                        <p class="item-description">The Walking Dead: Daryl Dixon, Season 3 The Walking Dead: Daryl Dixon Genre: Drama Price: $2.99 Release Date: September 7, 2025 &#169; © All rights re...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Drama</span>
+                            
+                            
+                            <span class="meta-price">$2.99</span>
+                            
+                            
+                            <span class="meta-date">2025-09-07</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://itunes.apple.com/us/tv-season/spartacus-the-complete-series/id1828263870?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/bb/37/a7/bb37a7bb-846c-d5fe-4ba2-3652698a173b/Spartacus_3.jpg/300x300bb.png" 
+                                 alt="Spartacus, The Complete Series" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://itunes.apple.com/us/tv-season/spartacus-the-complete-series/id1828263870?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Spartacus, The Complete Series
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Spartacus</p>
+                        
+                        <p class="item-description">Spartacus, The Complete Series Spartacus Genre: Drama Price: $19.99 Release Date: January 22, 2010 &#169; © 2010 Starz Entertainment, LLC. All Rights ...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Drama</span>
+                            
+                            
+                            <span class="meta-price">$19.99</span>
+                            
+                            
+                            <span class="meta-date">2010-01-22</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://itunes.apple.com/us/tv-season/arcane-league-of-legends-season-1/id1760062159?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/d6/5e/72/d65e72cc-ad00-f903-8b00-a9a4fe8bf881/21251524-8cad-4dff-b839-27626b8ce351_ARCN1_3000x3000.jpg/300x300bb.png" 
+                                 alt="Arcane League Of Legends: Season 1" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://itunes.apple.com/us/tv-season/arcane-league-of-legends-season-1/id1760062159?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Arcane League Of Legends: Season 1
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Arcane League Of Legends</p>
+                        
+                        <p class="item-description">Arcane League Of Legends: Season 1 Arcane League Of Legends Genre: Animation Price: $6.99 Release Date: October 6, 2021 &#169; © 2021 Riot Games, Inc.</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Animation</span>
+                            
+                            
+                            <span class="meta-price">$6.99</span>
+                            
+                            
+                            <span class="meta-date">2021-10-06</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://itunes.apple.com/us/tv-season/mad-men-the-complete-series/id1324229692?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video118/v4/bd/e5/b4/bde5b495-9df6-9749-447f-1551e87005c1/mzl.wnaccwwe.jpg/300x300bb.png" 
+                                 alt="Mad Men, The Complete Series" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://itunes.apple.com/us/tv-season/mad-men-the-complete-series/id1324229692?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Mad Men, The Complete Series
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Mad Men</p>
+                        
+                        <p class="item-description">Mad Men, The Complete Series Mad Men Genre: Drama Price: $19.99 Release Date: July 19, 2007 &#169; © 2017 Lions Gate Television Inc. All Rights Reserv...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Drama</span>
+                            
+                            
+                            <span class="meta-price">$19.99</span>
+                            
+                            
+                            <span class="meta-date">2007-07-19</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://itunes.apple.com/us/tv-season/schitts-creek-the-complete-series/id1503825947?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/8a/ff/95/8aff950f-a43b-9d07-6181-1a0cdd4f0182/pr_source.lsr/300x300bb.png" 
+                                 alt="Schitt's Creek: The Complete Series" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://itunes.apple.com/us/tv-season/schitts-creek-the-complete-series/id1503825947?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Schitt's Creek: The Complete Series
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Schitt's Creek</p>
+                        
+                        <p class="item-description">Schitt's Creek: The Complete Series Schitt's Creek Genre: Comedy Price: $24.99 Release Date: January 13, 2015 &#169; © 2020 CBS Corp</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Comedy</span>
+                            
+                            
+                            <span class="meta-price">$24.99</span>
+                            
+                            
+                            <span class="meta-date">2015-01-13</span>
                             
                         </div>
                     </div>
@@ -291,39 +730,6 @@ body {
                             
                             
                             <span class="meta-date">2025-07-23</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/blue-mountain-state-the-complete-series/id1719146229?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video116/v4/9b/2e/9f/9b2e9f0a-7c09-5996-8882-c60a58b5e37c/afe7f630-a04e-402e-8b9d-4a9c952f9d9d_9801179_z_bluek2172cau.jpg/300x300bb.png" 
-                                 alt="Blue Mountain State, The Complete Series" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/blue-mountain-state-the-complete-series/id1719146229?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Blue Mountain State, The Complete Series
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Blue Mountain State</p>
-                        
-                        <p class="item-description">Blue Mountain State, The Complete Series Blue Mountain State Genre: Comedy Price: $9.99 Release Date: January 11, 2010 &#169; BLUE MOUNTAIN STATE © 20...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Comedy</span>
-                            
-                            
-                            <span class="meta-price">$9.99</span>
-                            
-                            
-                            <span class="meta-date">2010-01-11</span>
                             
                         </div>
                     </div>
@@ -413,40 +819,7 @@ body {
                         
                         <p class="item-artist">The Newsroom</p>
                         
-                        <p class="item-description">The Newsroom, The Complete Series The Newsroom Genre: Drama Price: $14.99 Release Date: November 16, 2018 &#169; © 2012 - 2014 Home Box Office, Inc.</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Drama</span>
-                            
-                            
-                            <span class="meta-price">$14.99</span>
-                            
-                            
-                            <span class="meta-date">2018-11-16</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/mobland-season-1/id1821534823?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/47/f6/d6/47f6d686-b65e-f1de-7c99-87774a4e9171/MOBLAND_S1_LSR_CoverArt_3000x3000.lsr/300x300bb.png" 
-                                 alt="MobLand, Season 1" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/mobland-season-1/id1821534823?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                MobLand, Season 1
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">MobLand</p>
-                        
-                        <p class="item-description">MobLand, Season 1 MobLand Genre: Drama Price: $19.99 Release Date: March 30, 2025 &#169; © 2025 Viacom International Inc. All Rights Reserved.</p>
+                        <p class="item-description">The Newsroom, The Complete Series The Newsroom Genre: Drama Price: $19.99 Release Date: November 16, 2018 &#169; © 2012 - 2014 Home Box Office, Inc.</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">Drama</span>
@@ -455,40 +828,7 @@ body {
                             <span class="meta-price">$19.99</span>
                             
                             
-                            <span class="meta-date">2025-03-30</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/the-office-the-complete-series/id1438674900?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video128/v4/94/e8/7b/94e87bf4-ff39-3af8-8294-d371159f91d0/mzl.fgjrisdt.lsr/300x300bb.png" 
-                                 alt="The Office: The Complete Series" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/the-office-the-complete-series/id1438674900?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                The Office: The Complete Series
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">The Office</p>
-                        
-                        <p class="item-description">The Office: The Complete Series The Office Genre: Comedy Price: $69.99 Release Date: March 24, 2005 &#169; © 2005-2013 NBC Studios, Inc. and Universal...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Comedy</span>
-                            
-                            
-                            <span class="meta-price">$69.99</span>
-                            
-                            
-                            <span class="meta-date">2005-03-24</span>
+                            <span class="meta-date">2018-11-16</span>
                             
                         </div>
                     </div>
@@ -529,32 +869,65 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/star-trek-lower-decks-the-complete-series/id1792111596?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/97/13/9d/97139d3a-7516-4fbf-07d7-924fb545c7fc/STLowerDecks_EN_3000x3000.jpg/300x300bb.png" 
-                                 alt="Star Trek: Lower Decks, The Complete Series" 
+                        <a href="https://itunes.apple.com/us/tv-season/star-wars-the-clone-wars-season-6/id864107574?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video6/v4/18/a3/a2/18a3a2ea-fb45-a0a3-2658-f322d9627655/mzl.fxqrratk.jpg/300x300bb.png" 
+                                 alt="Star Wars: The Clone Wars, Season 6" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/star-trek-lower-decks-the-complete-series/id1792111596?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Star Trek: Lower Decks, The Complete Series
+                            <a href="https://itunes.apple.com/us/tv-season/star-wars-the-clone-wars-season-6/id864107574?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Star Wars: The Clone Wars, Season 6
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Star Trek: Lower Decks</p>
+                        <p class="item-artist">Star Wars: The Clone Wars</p>
                         
-                        <p class="item-description">Star Trek: Lower Decks, The Complete Series Star Trek: Lower Decks Genre: Comedy Price: $24.99 Release Date: March 24, 2025 &#169; © 2025 Paramount Gl...</p>
+                        <p class="item-description">Star Wars: The Clone Wars, Season 6 Star Wars: The Clone Wars Genre: Sci-Fi & Fantasy Price: $14.99 Release Date: March 7, 2014 &#169; TM &amp; © 2014...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Sci-Fi & Fantasy</span>
+                            
+                            
+                            <span class="meta-price">$14.99</span>
+                            
+                            
+                            <span class="meta-date">2014-03-07</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://itunes.apple.com/us/tv-season/alf-the-complete-series/id1789444730?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/c2/3a/f8/c23af83f-52c0-2591-8d86-67594adf23da/Alf_3000x3000.jpg/300x300bb.png" 
+                                 alt="ALF, The Complete Series" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://itunes.apple.com/us/tv-season/alf-the-complete-series/id1789444730?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                ALF, The Complete Series
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">ALF</p>
+                        
+                        <p class="item-description">ALF, The Complete Series ALF Genre: Comedy Price: $9.99 Release Date: September 22, 1986 &#169; © 2025 Alien Productions under exclusive license to Sh...</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">Comedy</span>
                             
                             
-                            <span class="meta-price">$24.99</span>
+                            <span class="meta-price">$9.99</span>
                             
                             
-                            <span class="meta-date">2025-03-24</span>
+                            <span class="meta-date">1986-09-22</span>
                             
                         </div>
                     </div>
@@ -562,65 +935,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/eastbound-down-the-complete-series/id1120192906?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video30/v4/31/86/67/3186675f-1a37-ee7b-f082-b2250a1ea004/mzl.lqldoujj.lsr/300x300bb.png" 
-                                 alt="Eastbound & Down, The Complete Series" 
+                        <a href="https://itunes.apple.com/us/tv-season/westworld-the-complete-series/id1635655856?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video122/v4/e0/53/80/e0538001-3466-60c4-327f-2de273086a7a/pr_source.jpg/300x300bb.png" 
+                                 alt="Westworld: The Complete Series" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/eastbound-down-the-complete-series/id1120192906?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Eastbound & Down, The Complete Series
+                            <a href="https://itunes.apple.com/us/tv-season/westworld-the-complete-series/id1635655856?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Westworld: The Complete Series
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Eastbound & Down</p>
+                        <p class="item-artist">Westworld</p>
                         
-                        <p class="item-description">Eastbound &amp; Down, The Complete Series Eastbound &amp; Down Genre: Comedy Price: $24.99 Release Date: February 15, 2009 &#169; © 2016 Home Box Offi...</p>
+                        <p class="item-description">Westworld: The Complete Series Westworld Genre: Sci-Fi & Fantasy Price: $39.99 Release Date: August 14, 2022 &#169; © 2022 Warner Bros. Entertainment ...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Comedy</span>
+                            <span class="meta-genre">Sci-Fi & Fantasy</span>
                             
                             
-                            <span class="meta-price">$24.99</span>
+                            <span class="meta-price">$39.99</span>
                             
                             
-                            <span class="meta-date">2009-02-15</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/the-challenge-season-41/id1826845255?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/60/76/8a/60768a84-c172-dab6-f965-5e467f2d736a/IT_LSR_The_Challenge_S41_3000x3000.png/300x300bb.png" 
-                                 alt="The Challenge, Season 41" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/the-challenge-season-41/id1826845255?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                The Challenge, Season 41
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">The Challenge</p>
-                        
-                        <p class="item-description">The Challenge, Season 41 The Challenge Genre: Reality & Nonfiction Price: $17.94 Release Date: July 23, 2025 &#169; © Paramount Global 2025</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Reality Tv</span>
-                            
-                            
-                            <span class="meta-price">$17.94</span>
-                            
-                            
-                            <span class="meta-date">2025-07-23</span>
+                            <span class="meta-date">2022-08-14</span>
                             
                         </div>
                     </div>
@@ -628,32 +968,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/mad-men-the-complete-series/id1324229692?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video118/v4/bd/e5/b4/bde5b495-9df6-9749-447f-1551e87005c1/mzl.wnaccwwe.jpg/300x300bb.png" 
-                                 alt="Mad Men, The Complete Series" 
+                        <a href="https://itunes.apple.com/us/tv-season/mobland-season-1/id1821534823?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/47/f6/d6/47f6d686-b65e-f1de-7c99-87774a4e9171/MOBLAND_S1_LSR_CoverArt_3000x3000.lsr/300x300bb.png" 
+                                 alt="MobLand, Season 1" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/mad-men-the-complete-series/id1324229692?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Mad Men, The Complete Series
+                            <a href="https://itunes.apple.com/us/tv-season/mobland-season-1/id1821534823?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                MobLand, Season 1
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Mad Men</p>
+                        <p class="item-artist">MobLand</p>
                         
-                        <p class="item-description">Mad Men, The Complete Series Mad Men Genre: Drama Price: $34.99 Release Date: July 19, 2007 &#169; © 2017 Lions Gate Television Inc. All Rights Reserv...</p>
+                        <p class="item-description">MobLand, Season 1 MobLand Genre: Drama Price: $19.99 Release Date: March 30, 2025 &#169; © 2025 Viacom International Inc. All Rights Reserved.</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">Drama</span>
                             
                             
-                            <span class="meta-price">$34.99</span>
+                            <span class="meta-price">$19.99</span>
                             
                             
-                            <span class="meta-date">2007-07-19</span>
+                            <span class="meta-date">2025-03-30</span>
                             
                         </div>
                     </div>
@@ -694,197 +1034,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/house-of-the-dragon-seasons-1-2/id1747588162?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/3b/7d/50/3b7d50bf-0701-4a61-8228-ab5afe927122/mzl.pdmhyqzl.jpg/300x300bb.png" 
-                                 alt="House of the Dragon: Seasons 1-2" 
+                        <a href="https://itunes.apple.com/us/tv-season/the-cleveland-show-the-complete-series/id1827585243?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/4b/44/c4/4b44c4b4-f357-f77b-91fe-4f9e345f366e/ClevelandShow_CS_Apple_CoverArt_LSR_3000x3000-688bd26bfe6447c7ff65c9ba.png/300x300bb.png" 
+                                 alt="The Cleveland Show, The Complete Series" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/house-of-the-dragon-seasons-1-2/id1747588162?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                House of the Dragon: Seasons 1-2
+                            <a href="https://itunes.apple.com/us/tv-season/the-cleveland-show-the-complete-series/id1827585243?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                The Cleveland Show, The Complete Series
                             </a>
                         </h3>
                         
-                        <p class="item-artist">House of the Dragon</p>
+                        <p class="item-artist">The Cleveland Show</p>
                         
-                        <p class="item-description">House of the Dragon: Seasons 1-2 House of the Dragon Genre: Drama Price: $24.99 Release Date: August 4, 2024 &#169; © 2024 Home Box Office, Inc.</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Drama</span>
-                            
-                            
-                            <span class="meta-price">$24.99</span>
-                            
-                            
-                            <span class="meta-date">2024-08-04</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/a-black-lady-sketch-show-season-1-4/id1686457571?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video126/v4/22/38/16/223816a9-c560-a4fc-47d7-ade723df2aff/pr_source.jpg/300x300bb.png" 
-                                 alt="A Black Lady Sketch Show: Season 1-4" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/a-black-lady-sketch-show-season-1-4/id1686457571?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                A Black Lady Sketch Show: Season 1-4
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">A Black Lady Sketch Show</p>
-                        
-                        <p class="item-description">A Black Lady Sketch Show: Season 1-4 A Black Lady Sketch Show Genre: Comedy Price: $9.99 Release Date: May 20, 2023 &#169; © 2023 Home Box Office, Inc...</p>
+                        <p class="item-description">The Cleveland Show, The Complete Series The Cleveland Show Genre: Comedy Price: $19.99 Release Date: September 27, 2009 &#169; © 2009 Twentieth Centur...</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">Comedy</span>
                             
                             
-                            <span class="meta-price">$9.99</span>
-                            
-                            
-                            <span class="meta-date">2023-05-20</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/spartacus-the-complete-series/id1828263870?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/bb/37/a7/bb37a7bb-846c-d5fe-4ba2-3652698a173b/Spartacus_3.jpg/300x300bb.png" 
-                                 alt="Spartacus, The Complete Series" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/spartacus-the-complete-series/id1828263870?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Spartacus, The Complete Series
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Spartacus</p>
-                        
-                        <p class="item-description">Spartacus, The Complete Series Spartacus Genre: Drama Price: $29.99 Release Date: January 22, 2010 &#169; © 2010 Starz Entertainment, LLC. All Rights ...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Drama</span>
-                            
-                            
-                            <span class="meta-price">$29.99</span>
-                            
-                            
-                            <span class="meta-date">2010-01-22</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/call-me-kat-the-complete-series/id1710033210?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video116/v4/a6/90/2c/a6902c6c-05e8-c0d0-d7a0-2cd66b406b92/6aa6a1dd-6687-419c-b106-87c3b488ef75_Call_Me_Kat_CSR_S_DD_KA_TT_3000x3000_300dpi_EN.png/300x300bb.png" 
-                                 alt="Call Me Kat: The Complete Series" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/call-me-kat-the-complete-series/id1710033210?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Call Me Kat: The Complete Series
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Call Me Kat</p>
-                        
-                        <p class="item-description">Call Me Kat: The Complete Series Call Me Kat Genre: Drama Price: $14.99 Release Date: October 29, 2023 &#169; © 2023 Warner Bros Entertainment Inc. Al...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Drama</span>
-                            
-                            
-                            <span class="meta-price">$14.99</span>
-                            
-                            
-                            <span class="meta-date">2023-10-29</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/mommy-meanest/id1739836407?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/23/b6/19/23b619a6-8aa6-2370-7cd8-ff9b3da8daea/f76f7bfe-a2eb-4c40-9af1-0e997e06f920_Mommy_Meanest_3000x3000_b.jpg/300x300bb.png" 
-                                 alt="Mommy Meanest" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/mommy-meanest/id1739836407?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Mommy Meanest
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Mommy Meanest</p>
-                        
-                        <p class="item-description">Mommy Meanest Mommy Meanest Genre: Drama Price: $4.99 Release Date: May 12, 2024 &#169; © 2024 A+E Networks. All Rights Reserved.</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Drama</span>
-                            
-                            
-                            <span class="meta-price">$4.99</span>
-                            
-                            
-                            <span class="meta-date">2024-05-12</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://itunes.apple.com/us/tv-season/yellowstone-season-1/id1382833767?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Video115/v4/97/be/1f/97be1f35-15be-aa5c-9584-b5ef70582d65/mzl.dxhbunmd.lsr/300x300bb.png" 
-                                 alt="Yellowstone, Season 1" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://itunes.apple.com/us/tv-season/yellowstone-season-1/id1382833767?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Yellowstone, Season 1
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Yellowstone</p>
-                        
-                        <p class="item-description">Yellowstone, Season 1 Yellowstone Genre: Drama Price: $19.99 Release Date: June 20, 2018 &#169; © 2018 Viacom International,Inc.</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Drama</span>
-                            
-                            
                             <span class="meta-price">$19.99</span>
                             
                             
-                            <span class="meta-date">2018-06-20</span>
+                            <span class="meta-date">2009-09-27</span>
                             
                         </div>
                     </div>
