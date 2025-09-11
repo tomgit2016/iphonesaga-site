@@ -1,0 +1,3 @@
+[submodule "output"]
+	path = output
+	url = git@github.com:tomgit2016/iphonesaga-site.git
