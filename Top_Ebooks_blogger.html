@@ -1,0 +1,979 @@
+<style>
+/* iTunes RSS Display Styles for Blogger */
+.itunes-category-section {
+    margin-bottom: 3rem;
+}
+
+.itunes-category-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #3498db;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.itunes-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.itunes-content-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.itunes-content-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.itunes-item-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.itunes-item-image a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.itunes-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.itunes-content-item:hover .itunes-item-image img {
+    transform: scale(1.05);
+}
+
+.itunes-item-content {
+    padding: 1.25rem;
+    flex-shrink: 0;
+}
+
+.itunes-item-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.itunes-item-title a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.itunes-item-title a:hover {
+    color: #3498db;
+}
+
+.itunes-item-artist {
+    color: #7f8c8d;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.itunes-item-description {
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.itunes-item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.itunes-item-meta span {
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.itunes-meta-price {
+    background: #e8f5e8 !important;
+    color: #27ae60 !important;
+}
+
+/* Page-level social media sharing styles for Blogger */
+.itunes-page-social-share {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.itunes-social-share-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.itunes-share-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    min-width: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.itunes-social-icons {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.itunes-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.itunes-social-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.itunes-social-icon:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.itunes-social-icon:hover svg {
+    transform: scale(1.1);
+}
+
+.itunes-social-icon:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Platform-specific colors for Blogger */
+.itunes-social-icon.itunes-twitter {
+    background: #1da1f2;
+}
+.itunes-social-icon.itunes-twitter:hover {
+    background: #0d8bd9;
+}
+
+.itunes-social-icon.itunes-facebook {
+    background: #1877f2;
+}
+.itunes-social-icon.itunes-facebook:hover {
+    background: #0c63d4;
+}
+
+.itunes-social-icon.itunes-whatsapp {
+    background: #25d366;
+}
+.itunes-social-icon.itunes-whatsapp:hover {
+    background: #20c75a;
+}
+
+.itunes-social-icon.itunes-line {
+    background: #00c300;
+}
+.itunes-social-icon.itunes-line:hover {
+    background: #00b300;
+}
+
+/* Responsive design for Blogger */
+@media (max-width: 768px) {
+    .itunes-content-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .itunes-category-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .itunes-item-content {
+        padding: 1rem;
+    }
+    
+    .itunes-item-title {
+        font-size: 1.1rem;
+    }
+    
+    .itunes-page-social-share {
+        padding: 0.75rem;
+        margin-bottom: 1.25rem;
+        border-radius: 10px;
+    }
+    
+    .itunes-social-share-section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .itunes-share-label {
+        font-size: 0.8rem;
+    }
+    
+    .itunes-social-icons {
+        gap: 0.3rem;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .itunes-social-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .itunes-social-icon svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .itunes-content-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+</style>
+
+
+
+<section class="itunes-category-section">
+    <h2 class="itunes-category-title">iTunes Store: Top Books</h2>
+    <div class="itunes-content-grid">
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/the-secret-of-secrets/id6740945045?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/a4/b5/84/a4b58455-fbc9-84fa-6da6-5d143bfc8e62/9780385546928.d.jpg/300x300bb.png" 
+                         alt="The Secret of Secrets" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/the-secret-of-secrets/id6740945045?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        The Secret of Secrets
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Dan Brown</p>
+                
+                <p class="itunes-item-description">The world’s most celebrated thriller writer and author of The Da Vinci Code returns with his most stunning novel yet—a propulsive, twisty, thought-pro...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Mysteries & Thrillers</span>
+                    
+                    
+                    <span class="itunes-meta-price">$15.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-09</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/the-gingerbread-bakery/id6736856377?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/4c/a4/4d/4ca44d6c-2fa0-f48b-403d-388bd79f7408/9780008728083.jpg/300x300bb.png" 
+                         alt="The Gingerbread Bakery" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/the-gingerbread-bakery/id6736856377?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        The Gingerbread Bakery
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Laurie Gilmore</p>
+                
+                <p class="itunes-item-description">The highly anticipated new Dream Harbor romance from the #1 New York Times bestselling author of The Pumpkin Spice Café! 'All the makings of a top tie...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Holiday</span>
+                    
+                    
+                    <span class="itunes-meta-price">$4.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-11</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/the-apothecary-diaries-volume-15-light-novel/id6746349332?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/88/e1/1b/88e11bdd-1f8f-416b-b32e-b1dd6db1259d/Cover.jpg/300x300bb.png" 
+                         alt="The Apothecary Diaries: Volume 15 (Light Novel)" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/the-apothecary-diaries-volume-15-light-novel/id6746349332?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        The Apothecary Diaries: Volume 15 (Light Novel)
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Natsu Hyuuga</p>
+                
+                <p class="itunes-item-description">While pursuing the secret of the mysterious jade, Maomao and Jinshi found more than just the tablet’s owner—they’ve also discovered a forbidden book t...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Mysteries & Thrillers</span>
+                    
+                    
+                    <span class="itunes-meta-price">$7.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-12</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/killers-of-the-flower-moon/id1092942258?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/2c/da/62/2cda6298-34e0-961a-d8c9-0b0aa5b50a0e/9780385534253.d.jpg/300x300bb.png" 
+                         alt="Killers of the Flower Moon" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/killers-of-the-flower-moon/id1092942258?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        Killers of the Flower Moon
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">David Grann</p>
+                
+                <p class="itunes-item-description">#1 NEW YORK TIMES BESTSELLER • A twisting, haunting true-life murder mystery about one of the most monstrous crimes in American history, from the auth...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">True Crime</span>
+                    
+                    
+                    <span class="itunes-meta-price">$1.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2017-04-18</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/clown-town/id6739274159?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/f0/20/0d/f0200d6b-4dd1-718c-14f4-cf903c77d70b/9781641297271.d.jpg/300x300bb.png" 
+                         alt="Clown Town" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/clown-town/id6739274159?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        Clown Town
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Mick Herron</p>
+                
+                <p class="itunes-item-description">“May be the best Slow Horses book to date. ”—The Wall Street Journal THE NEW NOVEL IN THE SERIES BEHIND SLOW HORSES, AN APPLE ORIGINAL SERIES NOW STRE...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Mysteries & Thrillers</span>
+                    
+                    
+                    <span class="itunes-meta-price">$14.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-09</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/the-hallmarked-man/id6737756015?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/53/33/a1/5333a189-a789-cd48-44f4-745ce9271ed4/9780316586023.jpg/300x300bb.png" 
+                         alt="The Hallmarked Man" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/the-hallmarked-man/id6737756015?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        The Hallmarked Man
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Robert Galbraith</p>
+                
+                <p class="itunes-item-description">THE INTERNATIONAL BESTSELLING SERIES RETURNS THIS SEPTEMBER A dismembered corpse is discovered in the vault of a silver shop. The police initially bel...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Mysteries & Thrillers</span>
+                    
+                    
+                    <span class="itunes-meta-price">$16.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-02</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/the-book-of-sheen/id6746126822?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/f9/ba/b9/f9bab980-8d56-b71c-1264-e90cddf482fc/9781668075302.jpg/300x300bb.png" 
+                         alt="The Book of Sheen" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/the-book-of-sheen/id6746126822?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        The Book of Sheen
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Charlie Sheen</p>
+                
+                <p class="itunes-item-description">For the first time, Charlie Sheen, the star of Platoon , Wall Street , Major League , and Two and a Half Men , writes the story of his extraordinary l...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Biographies & Memoirs</span>
+                    
+                    
+                    <span class="itunes-meta-price">$16.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-09</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/buckeye-a-read-with-jenna-pick/id6737842089?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/96/14/fd/9614fde6-9660-4e50-df3b-d57821ff186b/9780593595046.d.jpg/300x300bb.png" 
+                         alt="Buckeye: A Read with Jenna Pick" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/buckeye-a-read-with-jenna-pick/id6737842089?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        Buckeye: A Read with Jenna Pick
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Patrick Ryan</p>
+                
+                <p class="itunes-item-description">NEW YORK TIMES BESTSELLER • READ WITH JENNA BOOK CLUB PICK AS FEATURED ON TODAY • Hailed as “an American epic” (NPR), this captivating story weaves th...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Literary</span>
+                    
+                    
+                    <span class="itunes-meta-price">$13.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-02</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/framed-in-death/id6739216580?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/19/fb/15/19fb15ca-f4b4-984e-cddb-9781b3a7ae1a/9781250370839.jpg/300x300bb.png" 
+                         alt="Framed in Death" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/framed-in-death/id6739216580?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        Framed in Death
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">J. D. Robb</p>
+                
+                <p class="itunes-item-description">Death imitates art in the brand-new crime thriller starring homicide cop Eve Dallas from the #1 New York Times -bestselling author J.D. Robb. Manhatta...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Police Procedural</span>
+                    
+                    
+                    <span class="itunes-meta-price">$14.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-02</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/the-ship-of-brides/id784621982?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication112/v4/a3/cb/45/a3cb4526-f752-50a4-3ef8-3fe48c19e335/9780698156340.d.jpg/300x300bb.png" 
+                         alt="The Ship of Brides" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/the-ship-of-brides/id784621982?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        The Ship of Brides
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Jojo Moyes</p>
+                
+                <p class="itunes-item-description">From the New York Times bestselling author of The Giver of Stars and the forthcoming Someone Else's Shoes , a post-WWII story of the war brides who cr...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Historical</span>
+                    
+                    
+                    <span class="itunes-meta-price">$1.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2014-05-27</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/tom-clancy-terminal-velocity/id6738938271?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/51/65/75/5165755e-faa3-b241-4950-e8df2158ab95/9780593718049.d.jpg/300x300bb.png" 
+                         alt="Tom Clancy Terminal Velocity" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/tom-clancy-terminal-velocity/id6738938271?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        Tom Clancy Terminal Velocity
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">M.P. Woodward</p>
+                
+                <p class="itunes-item-description">Jack Ryan Jr battles terrorists in the disputed mountains of Kashmir to save a comrade in the latest entry in the #1 New York Times bestselling series...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Mysteries & Thrillers</span>
+                    
+                    
+                    <span class="itunes-meta-price">$14.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-02</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/all-the-way-to-the-river-oprahs-book-club/id6740307367?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/7b/67/ff/7b67ffd1-861e-e257-6476-37cdc8707c23/9780593541005.d.jpg/300x300bb.png" 
+                         alt="All the Way to the River: Oprah's Book Club" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/all-the-way-to-the-river-oprahs-book-club/id6740307367?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        All the Way to the River: Oprah's Book Club
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Elizabeth Gilbert</p>
+                
+                <p class="itunes-item-description">AN OPRAH'S BOOK CLUB PICK "A delicious mashup of narrative that's by turns harrowing and healing." –People “Entertaining, insightful, wrenching … punc...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Self-Improvement</span>
+                    
+                    
+                    <span class="itunes-meta-price">$18.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-09</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/clive-cussler-ghost-soldier/id6473711537?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/a0/49/39/a049395a-050e-c167-d606-fa6cb3e75f94/9780593719251.d.jpg/300x300bb.png" 
+                         alt="Clive Cussler Ghost Soldier" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/clive-cussler-ghost-soldier/id6473711537?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        Clive Cussler Ghost Soldier
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Mike Maden</p>
+                
+                <p class="itunes-item-description">A deadly war game. An adversary as hard to find as he is to kill. Weapons so sophisticated, none have seen the like before. Juan Cabrillo and the crew...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Action & Adventure</span>
+                    
+                    
+                    <span class="itunes-meta-price">$2.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2024-09-03</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/the-midnight-feast/id6469452827?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/c3/92/1c/c3921c86-0e72-fb70-2ae1-ac2708bc2f1a/9780063003125.jpg/300x300bb.png" 
+                         alt="The Midnight Feast" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/the-midnight-feast/id6469452827?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        The Midnight Feast
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Lucy Foley</p>
+                
+                <p class="itunes-item-description">An instant New York Times bestseller! "Sharp, stylish and stunning...Foley's best yet." —&#xa0;Chris Whitaker,&#xa0;New York Times&#xa0;bestselling au...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Mysteries & Thrillers</span>
+                    
+                    
+                    <span class="itunes-meta-price">$12.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2024-06-18</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/the-final-twist/id1534489798?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication126/v4/f3/fd/99/f3fd9962-0940-461a-f682-aaf5c628f1c3/9780525539155.d.jpg/300x300bb.png" 
+                         alt="The Final Twist" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/the-final-twist/id1534489798?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        The Final Twist
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Jeffery Deaver</p>
+                
+                <p class="itunes-item-description">THE INSPIRATION FOR THE UPCOMING CBS ORIGINAL SERIES TRACKER “The master of ticking-bomb suspense” ( People ) returns with a devilishly good thriller,...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Mysteries & Thrillers</span>
+                    
+                    
+                    <span class="itunes-meta-price">$1.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2021-05-11</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/confronting-evil/id6741430648?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/0a/b5/1b/0ab51ba9-6033-a2d2-9b83-8b9226f43c10/9781250374059.jpg/300x300bb.png" 
+                         alt="Confronting Evil" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/confronting-evil/id6741430648?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        Confronting Evil
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Bill O'Reilly & Josh Hammer</p>
+                
+                <p class="itunes-item-description">By the #1 bestselling history author in the world, Bill O'Reilly: A dramatic confrontation with good, evil, and the worst people who ever lived The co...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">History</span>
+                    
+                    
+                    <span class="itunes-meta-price">$16.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-09</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/clive-cussler-the-iron-storm/id6636468453?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/da/2e/6b/da2e6b93-369c-defe-f54f-208544889efc/9780593853573.d.jpg/300x300bb.png" 
+                         alt="Clive Cussler The Iron Storm" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/clive-cussler-the-iron-storm/id6636468453?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        Clive Cussler The Iron Storm
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Jack Du Brul</p>
+                
+                <p class="itunes-item-description">Detective Isaac Bell faces the horrors of the Great War while battling a mysterious anarchist group intent on bringing brutality to the shores of Amer...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Action & Adventure</span>
+                    
+                    
+                    <span class="itunes-meta-price">$14.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-09</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/the-maga-doctrine/id6473185925?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication126/v4/32/5a/cc/325acc00-8269-db63-8672-7c35c5c1748a/9780062974679.jpg/300x300bb.png" 
+                         alt="The MAGA Doctrine" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/the-maga-doctrine/id6473185925?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        The MAGA Doctrine
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Charlie Kirk</p>
+                
+                <p class="itunes-item-description">NEW YORK TIMES &#xa0; BESTSELLER. The movement that brought Donald&#xa0; Trump to the White House has better&#xa0; ideas than the old right or the new...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Political Science</span>
+                    
+                    
+                    <span class="itunes-meta-price">$12.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2023-11-21</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/pitcher-perfect/id6739495600?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/b8/fd/3d/b8fd3d69-df20-e81f-2d92-ec80ebfd27ae/9780063380844.jpg/300x300bb.png" 
+                         alt="Pitcher Perfect" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/pitcher-perfect/id6739495600?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        Pitcher Perfect
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Tessa Bailey</p>
+                
+                <p class="itunes-item-description">#1&#xa0;New York Times&#xa0;bestselling author Tessa Bailey is back with an all-new enemies-to-lovers, fake-dating sports romance about a playboy hock...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Romantic Comedy</span>
+                    
+                    
+                    <span class="itunes-meta-price">$11.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-09-09</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+        <article class="itunes-content-item">
+            <div class="itunes-item-image">
+                <a href="https://books.apple.com/us/book/my-friends/id6608980957?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/e8/2f/02/e82f0248-aaba-ebef-a0a0-0859316f220d/9781982112844.jpg/300x300bb.png" 
+                         alt="My Friends" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'">
+                </a>
+            </div>
+            <div class="itunes-item-content">
+                <h3 class="itunes-item-title">
+                    <a href="https://books.apple.com/us/book/my-friends/id6608980957?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                        My Friends
+                    </a>
+                </h3>
+                
+                <p class="itunes-item-artist">Fredrik Backman</p>
+                
+                <p class="itunes-item-description">#1 NEW YORK TIMES BESTSELLER! A Most Anticipated Book of 2025: Goodreads • USA TODAY • Marie Claire • BookPage • Literary Lifestyle • Book Riot • Suns...</p>
+                <div class="itunes-item-meta">
+                    
+                    <span class="itunes-meta-genre">Fiction & Literature</span>
+                    
+                    
+                    <span class="itunes-meta-price">$14.99</span>
+                    
+                    
+                    <span class="itunes-meta-date">2025-05-06</span>
+                    
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</section>
+
+
+<!-- Social Media Share Section for Blogger - Bottom -->
+
+
+
+
+<div class="itunes-page-social-share">
+    <div class="itunes-social-share-section">
+        <span class="itunes-share-label">Share this page:</span>
+        <div class="itunes-social-icons">
+            <a href="https://twitter.com/intent/tweet?url=https%3A//apple-top-20.blogspot.com/&text=The%20Secret%20of%20Secrets%20tops%20the%20Books%20chart%20this%20week%21" target="_blank" rel="noopener" class="itunes-social-icon itunes-twitter" title="Share on X (Twitter)">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//apple-top-20.blogspot.com/" target="_blank" rel="noopener" class="itunes-social-icon itunes-facebook" title="Share on Facebook">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/?text=The%20Secret%20of%20Secrets%20tops%20the%20Books%20chart%20this%20week%21%20https%3A//apple-top-20.blogspot.com/" target="_blank" rel="noopener" class="itunes-social-icon itunes-whatsapp" title="Share on WhatsApp">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+            </a>
+            <a href="https://line.me/R/msg/text/?The%20Secret%20of%20Secrets%20tops%20the%20Books%20chart%20this%20week%21%20https%3A//apple-top-20.blogspot.com/" target="_blank" rel="noopener" class="itunes-social-icon itunes-line" title="Share on LINE">
+                <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
