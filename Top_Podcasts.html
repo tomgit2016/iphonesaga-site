@@ -14,7 +14,7 @@
     <meta http-equiv="Cache-Control" content="public, max-age=3600">
     <meta http-equiv="Expires" content="3600">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itunes Store: Top Podcasts - September 09, 2025</title>
+    <title>Apple Universe Top 20 Charts - September 13, 2025</title>
     <style>
 /* Reset and base styles */
 * {
@@ -145,6 +145,50 @@ body {
     font-size: 0.75rem;
 }
 
+/* Header social media icons */
+.header-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.header-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.header-social-icon svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+    transition: transform 0.2s ease;
+}
+
+.header-social-icon:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-social-icon:hover svg {
+    transform: scale(1.1);
+}
+
+.header-social-icon:active {
+    transform: scale(1.05);
+}
+
 /* Main content */
 .main-content {
     max-width: 1200px;
@@ -273,6 +317,104 @@ body {
     color: #27ae60 !important;
 }
 
+/* Page-level social media sharing styles */
+.page-social-share {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+}
+
+.social-share-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.share-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    min-width: fit-content;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.social-icon:hover svg {
+    transform: scale(1.1);
+}
+
+.social-icon:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Platform-specific colors */
+.social-icon.twitter {
+    background: #1da1f2;
+}
+.social-icon.twitter:hover {
+    background: #0d8bd9;
+}
+
+.social-icon.facebook {
+    background: #1877f2;
+}
+.social-icon.facebook:hover {
+    background: #0c63d4;
+}
+
+.social-icon.whatsapp {
+    background: #25d366;
+}
+.social-icon.whatsapp:hover {
+    background: #20c75a;
+}
+
+.social-icon.line {
+    background: #00c300;
+}
+.social-icon.line:hover {
+    background: #00b300;
+}
+
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -309,6 +451,21 @@ body {
         font-size: 0.7rem;
     }
     
+    .header-social-icons {
+        gap: 0.4rem;
+        margin-top: 0.75rem;
+    }
+    
+    .header-social-icon {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .header-social-icon svg {
+        width: 11px;
+        height: 11px;
+    }
+    
     .content-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -320,6 +477,33 @@ body {
     
     .main-content {
         padding: 0 0.5rem;
+    }
+    
+    .page-social-share {
+        padding: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .social-share-section {
+        gap: 0.6rem;
+    }
+    
+    .share-label {
+        font-size: 0.8rem;
+    }
+    
+    .social-icons {
+        gap: 0.35rem;
+    }
+    
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .social-icon svg {
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -363,12 +547,58 @@ body {
         font-size: 0.65rem;
     }
     
+    .header-social-icons {
+        gap: 0.3rem;
+        margin-top: 0.5rem;
+    }
+    
+    .header-social-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .header-social-icon svg {
+        width: 10px;
+        height: 10px;
+    }
+    
     .item-content {
         padding: 1rem;
     }
     
     .item-title {
         font-size: 1.1rem;
+    }
+    
+    .page-social-share {
+        padding: 0.75rem;
+        margin-bottom: 1.25rem;
+        border-radius: 10px;
+    }
+    
+    .social-share-section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .share-label {
+        font-size: 0.8rem;
+    }
+    
+    .social-icons {
+        gap: 0.3rem;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .social-icon svg {
+        width: 15px;
+        height: 15px;
     }
 }
 
@@ -386,9 +616,9 @@ body {
     <header class="header">
         <div class="header-content">
             <div class="header-main">
-                <h1><span class="header-icon">📱</span>Itunes Store: Top Podcasts</h1>
+                <h1><span class="header-icon">📱</span>Apple Universe Top 20 Charts</h1>
                 <div class="subtitle-container">
-                    <p class="subtitle">Updated on September 09, 2025</p>
+                    <p class="subtitle">Updated on September 13, 2025</p>
                     <div class="header-button-container">
                         <a href="index.html" class="more-trends-btn" title="View all iTunes trends and charts">
                             <span class="btn-icon">📊</span>
@@ -396,43 +626,64 @@ body {
                         </a>
                     </div>
                 </div>
+                <!-- Small social media icons in header -->
+                
+                
+                
+                
+                <div class="header-social-icons">
+                    <a href="https://twitter.com/intent/tweet?url=https://iphonesaga.com&text=The%20Charlie%20Kirk%20Show%20tops%20the%20Podcasts%20chart%20this%20week%21" target="_blank" rel="noopener" class="header-social-icon" title="Share on X (Twitter)">
+                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://iphonesaga.com" target="_blank" rel="noopener" class="header-social-icon" title="Share on Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://wa.me/?text=The%20Charlie%20Kirk%20Show%20tops%20the%20Podcasts%20chart%20this%20week%21%20https://iphonesaga.com" target="_blank" rel="noopener" class="header-social-icon" title="Share on WhatsApp">
+                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+                    </a>
+                    <a href="https://line.me/R/msg/text/?The%20Charlie%20Kirk%20Show%20tops%20the%20Podcasts%20chart%20this%20week%21%20https://iphonesaga.com" target="_blank" rel="noopener" class="header-social-icon" title="Share on LINE">
+                        <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                    </a>
+                </div>
+                
             </div>
         </div>
     </header>
     
     <main class="main-content">
         
+        
         <section class="category-section">
             <div class="content-grid">
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/unicorn-girl/id1813180252?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/ae/99/30/ae993072-6cb5-648d-277c-f37309e09674/mza_205416200248101336.jpeg/300x300bb.png" 
-                                 alt="Unicorn Girl" 
+                        <a href="https://podcasts.apple.com/us/podcast/the-charlie-kirk-show/id1460600818?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a4/ec/27/a4ec2744-0819-caea-f34a-98a9384b53a8/mza_198406029451208643.jpg/300x300bb.png" 
+                                 alt="The Charlie Kirk Show" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/unicorn-girl/id1813180252?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Unicorn Girl
+                            <a href="https://podcasts.apple.com/us/podcast/the-charlie-kirk-show/id1460600818?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                The Charlie Kirk Show
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Apple TV+ / Seven Hills</p>
+                        <p class="item-artist">Charlie Kirk</p>
                         
-                        <p class="item-description">Candace Rivera had it all: perfect hair, perfect house, perfect life. After a messy divorce, she launched multimillion-dollar businesses and a global ...</p>
+                        <p class="item-description">Charlie is America's hardest working grassroots activist who has your inside scoop on the biggest news of the day and what's really going on behind th...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">True Crime</span>
+                            <span class="meta-genre">News Commentary</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2025-10-06</span>
+                            <span class="meta-date">2025-09-12</span>
                             
                         </div>
                     </div>
@@ -465,7 +716,7 @@ body {
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2025-09-09</span>
+                            <span class="meta-date">2025-09-12</span>
                             
                         </div>
                     </div>
@@ -473,23 +724,89 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/fifteen-inside-the-daniel-marsh-murders/id1834159537?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/59/f1/17/59f11754-a0b8-6733-c459-b625fbfee4ed/mza_550294358087796042.jpg/300x300bb.png" 
-                                 alt="Fifteen: Inside the Daniel Marsh Murders" 
+                        <a href="https://podcasts.apple.com/us/podcast/the-joe-rogan-experience/id360084272?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/89/4f/94/894f94f2-3d6a-e34d-ec4f-1c6dbf239511/mza_10409584512842304695.jpg/300x300bb.png" 
+                                 alt="The Joe Rogan Experience" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/fifteen-inside-the-daniel-marsh-murders/id1834159537?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Fifteen: Inside the Daniel Marsh Murders
+                            <a href="https://podcasts.apple.com/us/podcast/the-joe-rogan-experience/id360084272?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                The Joe Rogan Experience
                             </a>
                         </h3>
                         
-                        <p class="item-artist">CBS News</p>
+                        <p class="item-artist">Joe Rogan</p>
                         
-                        <p class="item-description">Claudia and Chip fell in love in their golden years, surrounded by children and grandchildren. But in the early morning hours of April 14, 2013, their...</p>
+                        <p class="item-description">The official podcast of comedian Joe Rogan.</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Comedy</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2025-09-10</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://podcasts.apple.com/us/podcast/the-megyn-kelly-show/id1532976305?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/3e/9f/c1/3e9fc13c-8030-b57e-f29e-0f14dc8db10d/mza_602213930944272333.jpg/300x300bb.png" 
+                                 alt="The Megyn Kelly Show" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://podcasts.apple.com/us/podcast/the-megyn-kelly-show/id1532976305?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                The Megyn Kelly Show
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">SiriusXM</p>
+                        
+                        <p class="item-description">The Megyn Kelly Show is your home for open, honest and provocative conversations with the most interesting and important political, legal and cultural...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">News Commentary</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2025-09-13</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://podcasts.apple.com/us/podcast/dateline-nbc/id1464919521?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/8c/00/7a/8c007a42-e550-0214-d4cb-b59cd7edf194/mza_5305664083935674472.jpeg/300x300bb.png" 
+                                 alt="Dateline NBC" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://podcasts.apple.com/us/podcast/dateline-nbc/id1464919521?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Dateline NBC
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">NBC News</p>
+                        
+                        <p class="item-description">Current and classic episodes, featuring compelling true-crime mysteries, powerful documentaries and in-depth investigations. Follow now to get the lat...</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">True Crime</span>
@@ -498,7 +815,40 @@ body {
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2025-09-30</span>
+                            <span class="meta-date">2025-09-11</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://podcasts.apple.com/us/podcast/the-ben-shapiro-show/id1047335260?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b6/2c/2c/b62c2c46-3fd6-5733-2c82-b95b781a4b40/mza_17718419788103424619.jpg/300x300bb.png" 
+                                 alt="The Ben Shapiro Show" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://podcasts.apple.com/us/podcast/the-ben-shapiro-show/id1047335260?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                The Ben Shapiro Show
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">The Daily Wire</p>
+                        
+                        <p class="item-description">Tired of the lies? Tired of the spin? Are you ready to hear the hard-hitting truth in comprehensive, conservative, principled fashion? The Ben Shapiro...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">News Commentary</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2025-09-13</span>
                             
                         </div>
                     </div>
@@ -539,32 +889,131 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/the-level-up-podcast-w-paul-alex/id1733135157?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/b3/48/25/b348251b-a873-1dd3-afd6-19fa3b035c00/mza_3389329863560405640.jpg/300x300bb.png" 
-                                 alt="The Level Up Podcast w/ Paul Alex" 
+                        <a href="https://podcasts.apple.com/us/podcast/pod-save-america/id1192761536?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b1/61/22/b1612204-971c-92ff-2096-d40337b8a3db/mza_2013869417360432103.jpg/300x300bb.png" 
+                                 alt="Pod Save America" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/the-level-up-podcast-w-paul-alex/id1733135157?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                The Level Up Podcast w/ Paul Alex
+                            <a href="https://podcasts.apple.com/us/podcast/pod-save-america/id1192761536?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Pod Save America
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Paul Alex Espinoza</p>
+                        <p class="item-artist">Crooked Media</p>
                         
-                        <p class="item-description">Welcome to The Level Up Podcast with Paul Alex, where real stories fuel real success. I’m Paul Alex, ex-Detective turned 8-figure entrepreneur. After ...</p>
+                        <p class="item-description">Pod Save America is a no-b******t conversation about politics hosted by former Obama aides Jon Favreau, Jon Lovett, Dan Pfeiffer, and Tommy Vietor. It...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Entrepreneurship</span>
+                            <span class="meta-genre">Politics</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2025-09-08</span>
+                            <span class="meta-date">2025-09-12</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://podcasts.apple.com/us/podcast/up-first-from-npr/id1222114325?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a6/19/62/a61962ad-cecf-4796-a752-2bbdb2187b87/mza_8984777588716816822.jpg/300x300bb.png" 
+                                 alt="Up First from NPR" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://podcasts.apple.com/us/podcast/up-first-from-npr/id1222114325?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Up First from NPR
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">NPR</p>
+                        
+                        <p class="item-description">NPR's Up First is the news you need to start your day. The three biggest stories of the day, with reporting and analysis from NPR News — in 10 minutes...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Daily News</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2025-09-13</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://podcasts.apple.com/us/podcast/morbid/id1379959217?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a4/69/a6/a469a64c-580d-938a-53f1-893d968e1332/mza_11675757052043432554.jpg/300x300bb.png" 
+                                 alt="Morbid" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://podcasts.apple.com/us/podcast/morbid/id1379959217?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Morbid
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Ash Kelley & Alaina Urquhart</p>
+                        
+                        <p class="item-description">It’s a lighthearted nightmare in here, weirdos! Morbid is a true crime, creepy history and all things spooky podcast hosted by an autopsy technician a...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">True Crime</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2025-09-12</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://podcasts.apple.com/us/podcast/pardon-my-take/id1089022756?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/35/74/6a/35746a0c-7687-7dde-ff04-338d93e78303/mza_10377078556009223546.jpg/300x300bb.png" 
+                                 alt="Pardon My Take" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://podcasts.apple.com/us/podcast/pardon-my-take/id1089022756?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Pardon My Take
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Barstool Sports</p>
+                        
+                        <p class="item-description">On "Pardon My Take," Big Cat & PFT Commenter deliver the loudest and most correct sports takes in the history of the spoken word. Daily topics, guests...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Football</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2025-09-11</span>
                             
                         </div>
                     </div>
@@ -597,7 +1046,7 @@ body {
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2025-09-07</span>
+                            <span class="meta-date">2025-09-10</span>
                             
                         </div>
                     </div>
@@ -605,23 +1054,56 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/mick-unplugged/id1731755953?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/6b/06/24/6b062442-f93a-f81e-ec84-184d74a16a3a/mza_15521847025683601795.jpeg/300x300bb.png" 
-                                 alt="Mick Unplugged" 
+                        <a href="https://podcasts.apple.com/us/podcast/the-bill-simmons-podcast/id1043699613?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/d8/05/47/d805470f-b08e-3e92-5484-13e3cc1af6fa/mza_4281460138210733917.jpg/300x300bb.png" 
+                                 alt="The Bill Simmons Podcast" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/mick-unplugged/id1731755953?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Mick Unplugged
+                            <a href="https://podcasts.apple.com/us/podcast/the-bill-simmons-podcast/id1043699613?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                The Bill Simmons Podcast
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Realm</p>
+                        <p class="item-artist">The Ringer</p>
                         
-                        <p class="item-description">"Mick Unplugged" is a transformative podcast that challenges listeners to move beyond the conventional 'Why' and embrace the empowering realm of 'Beca...</p>
+                        <p class="item-description">HBO and The Ringer's Bill Simmons hosts the most downloaded sports podcast of all time, with a rotating crew of celebrities, athletes, and media stapl...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Sports</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2025-09-09</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://podcasts.apple.com/us/podcast/midweek-rise-up/id1478078208?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/7a/ec/a3/7aeca394-e436-0c1d-2e59-21a64847647b/mza_17818209108796099686.jpg/300x300bb.png" 
+                                 alt="MIDWEEK RISE UP" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://podcasts.apple.com/us/podcast/midweek-rise-up/id1478078208?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                MIDWEEK RISE UP
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Erika Kirk</p>
+                        
+                        <p class="item-description">A devotional series by Erika Kirk released every Wednesday along with Monday Meditations to provide you that deep breath of, “God’s got this”. Each ep...</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">Self-Improvement</span>
@@ -638,23 +1120,56 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/wisecrack/id1831347408?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c5/1c/91/c51c91a1-b126-7600-d267-da5ec65b333a/mza_3473462199234529974.jpg/300x300bb.png" 
-                                 alt="Wisecrack" 
+                        <a href="https://podcasts.apple.com/us/podcast/the-meidastouch-podcast/id1510240831?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/73/32/80/733280d2-330a-2f24-c600-bc1088f9f899/mza_17833502176263457882.jpeg/300x300bb.png" 
+                                 alt="The MeidasTouch Podcast" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/wisecrack/id1831347408?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Wisecrack
+                            <a href="https://podcasts.apple.com/us/podcast/the-meidastouch-podcast/id1510240831?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                The MeidasTouch Podcast
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Tenderfoot TV and iHeartPodcasts</p>
+                        <p class="item-artist">MeidasTouch Network</p>
                         
-                        <p class="item-description">He left home as the chubby kid with a dream, a decade later, he's a touring comic with a killer set. Literally. In Wisecrack, stand-up comedian Edd He...</p>
+                        <p class="item-description">Ben, Brett and Jordy Meiselas are three brothers with very unique backgrounds! Ben is a top lawyer and Colin Kaepernick’s business partner. Brett is a...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Politics</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2025-09-13</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://podcasts.apple.com/us/podcast/48-hours/id965818306?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/c8/4f/8f/c84f8fa2-074d-6023-7f31-9c781b80dedc/mza_7616553513239265555.jpeg/300x300bb.png" 
+                                 alt="48 Hours" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://podcasts.apple.com/us/podcast/48-hours/id965818306?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                48 Hours
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">CBS News</p>
+                        
+                        <p class="item-description">“48 Hours” uncovers the narrative behind crime and justice cases that have left a lasting mark on society. Award-winning CBS News correspondents thoug...</p>
                         <div class="item-meta">
                             
                             <span class="meta-genre">True Crime</span>
@@ -663,7 +1178,7 @@ body {
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2025-10-06</span>
+                            <span class="meta-date">2025-09-11</span>
                             
                         </div>
                     </div>
@@ -671,32 +1186,65 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/the-joe-rogan-experience/id360084272?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/89/4f/94/894f94f2-3d6a-e34d-ec4f-1c6dbf239511/mza_10409584512842304695.jpg/300x300bb.png" 
-                                 alt="The Joe Rogan Experience" 
+                        <a href="https://podcasts.apple.com/us/podcast/stuff-you-should-know/id278981407?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/aa/82/91/aa82912f-23ee-6f6a-583c-a4e993164d0e/mza_12111158076643383507.jpg/300x300bb.png" 
+                                 alt="Stuff You Should Know" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/the-joe-rogan-experience/id360084272?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                The Joe Rogan Experience
+                            <a href="https://podcasts.apple.com/us/podcast/stuff-you-should-know/id278981407?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Stuff You Should Know
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Joe Rogan</p>
+                        <p class="item-artist">iHeartPodcasts</p>
                         
-                        <p class="item-description">The official podcast of comedian Joe Rogan.</p>
+                        <p class="item-description">If you've ever wanted to know about champagne, satanism, the Stonewall Uprising, chaos theory, LSD, El Nino, true crime and Rosa Parks, then look no f...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Comedy</span>
+                            <span class="meta-genre">Society & Culture</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2025-09-06</span>
+                            <span class="meta-date">2025-09-13</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://podcasts.apple.com/us/podcast/fantasy-footballers-fantasy-football-podcast/id917453719?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/e0/f6/ed/e0f6edb8-b352-1dd1-1836-c77fdf5c6f17/mza_1578365354745278550.jpeg/300x300bb.png" 
+                                 alt="Fantasy Footballers" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://podcasts.apple.com/us/podcast/fantasy-footballers-fantasy-football-podcast/id917453719?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Fantasy Footballers
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Fantasy Football</p>
+                        
+                        <p class="item-description">Fantasy Football at its very best. Say goodbye to the talking heads of the Fantasy Football world and hello to The Fantasy Footballers. The expert tri...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Fantasy Sports</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2025-09-12</span>
                             
                         </div>
                     </div>
@@ -737,329 +1285,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/alive-with-steve-burns/id1836239360?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/22/96/a3/2296a328-fde0-ee12-3c4d-77ddcf863ca6/mza_9728779593660031117.jpg/300x300bb.png" 
-                                 alt="Alive with Steve Burns" 
+                        <a href="https://podcasts.apple.com/us/podcast/smartless/id1521578868?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/b1/93/5f/b1935f9f-35be-9144-e813-626bd8dabfb4/mza_4132654708551836825.jpg/300x300bb.png" 
+                                 alt="SmartLess" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/alive-with-steve-burns/id1836239360?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Alive with Steve Burns
+                            <a href="https://podcasts.apple.com/us/podcast/smartless/id1521578868?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                SmartLess
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Lemonada Media</p>
+                        <p class="item-artist">Jason Bateman, Sean Hayes, Will Arnett</p>
                         
-                        <p class="item-description">There are a thousand podcasts you can listen to. This one listens back. Alive with Steve Burns continues the conversation you began all those years ag...</p>
+                        <p class="item-description">"SmartLess" with Jason Bateman, Sean Hayes, & Will Arnett is a podcast that connects and unites people from all walks of life to learn about shared ex...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Society & Culture</span>
+                            <span class="meta-genre">Comedy</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2025-08-28</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/pardon-my-take/id1089022756?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/35/74/6a/35746a0c-7687-7dde-ff04-338d93e78303/mza_10377078556009223546.jpg/300x300bb.png" 
-                                 alt="Pardon My Take" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/pardon-my-take/id1089022756?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Pardon My Take
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Barstool Sports</p>
-                        
-                        <p class="item-description">On "Pardon My Take," Big Cat & PFT Commenter deliver the loudest and most correct sports takes in the history of the spoken word. Daily topics, guests...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Football</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2025-09-04</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/dateline-nbc/id1464919521?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/8c/00/7a/8c007a42-e550-0214-d4cb-b59cd7edf194/mza_5305664083935674472.jpeg/300x300bb.png" 
-                                 alt="Dateline NBC" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/dateline-nbc/id1464919521?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Dateline NBC
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">NBC News</p>
-                        
-                        <p class="item-description">Current and classic episodes, featuring compelling true-crime mysteries, powerful documentaries and in-depth investigations. Follow now to get the lat...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">True Crime</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2025-09-09</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/the-diary-of-a-ceo-with-steven-bartlett/id1291423644?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/69/af/0d/69af0ddd-1e0f-7ae3-c84b-88f18e31ad0c/mza_14445920128472365296.png/300x300bb.png" 
-                                 alt="The Diary Of A CEO with Steven Bartlett" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/the-diary-of-a-ceo-with-steven-bartlett/id1291423644?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                The Diary Of A CEO with Steven Bartlett
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">DOAC</p>
-                        
-                        <p class="item-description">Steven Bartlett is a British entrepreneur, investor, and author. He’s the founder of Flight Story – a media company – and Flight Fund, an investment f...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Business</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2025-09-04</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/morbid/id1379959217?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a4/69/a6/a469a64c-580d-938a-53f1-893d968e1332/mza_11675757052043432554.jpg/300x300bb.png" 
-                                 alt="Morbid" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/morbid/id1379959217?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Morbid
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Ash Kelley & Alaina Urquhart</p>
-                        
-                        <p class="item-description">It’s a lighthearted nightmare in here, weirdos! Morbid is a true crime, creepy history and all things spooky podcast hosted by an autopsy technician a...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">True Crime</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2025-09-08</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/shawn-ryan-show/id1492492083?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/d0/b3/2d/d0b32d7f-ab2d-5791-83b0-854f698a9184/mza_13561258173056659752.jpg/300x300bb.png" 
-                                 alt="Shawn Ryan Show" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/shawn-ryan-show/id1492492083?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Shawn Ryan Show
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Shawn Ryan</p>
-                        
-                        <p class="item-description">The "Shawn Ryan Show" is hosted by Shawn Ryan, former U.S. Navy SEAL, CIA Contractor, and Founder of Vigilance Elite. We tell REAL stories about REAL ...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Philosophy</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2025-09-08</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/money-rehab-with-nicole-lapin/id1559564016?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/b9/b8/5d/b9b85d8a-0af5-e1fe-b64d-aee26b5fe40e/mza_9602913072814988515.jpg/300x300bb.png" 
-                                 alt="Money Rehab with Nicole Lapin" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/money-rehab-with-nicole-lapin/id1559564016?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Money Rehab with Nicole Lapin
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Money News Network</p>
-                        
-                        <p class="item-description">Ever notice that we will talk about everything before we talk about money? Sex? No problem. Politics? Bring it on. Money? Totally taboo. But not for l...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Business</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2025-09-09</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/pod-save-america/id1192761536?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b1/61/22/b1612204-971c-92ff-2096-d40337b8a3db/mza_2013869417360432103.jpg/300x300bb.png" 
-                                 alt="Pod Save America" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/pod-save-america/id1192761536?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Pod Save America
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Crooked Media</p>
-                        
-                        <p class="item-description">Pod Save America is a no-b******t conversation about politics hosted by former Obama aides Jon Favreau, Jon Lovett, Dan Pfeiffer, and Tommy Vietor. It...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Politics</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2025-09-09</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/huberman-lab/id1545953110?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/aa/f1/51/aaf151f6-8661-833a-c9d3-7c4ce22f8868/mza_253061105143942369.jpg/300x300bb.png" 
-                                 alt="Huberman Lab" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/huberman-lab/id1545953110?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Huberman Lab
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Scicomm Media</p>
-                        
-                        <p class="item-description">The Huberman Lab podcast is hosted by Andrew Huberman, Ph.D., a neuroscientist and tenured professor in the department of neurobiology, and by courtes...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Health & Fitness</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2025-09-08</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://podcasts.apple.com/us/podcast/betrayal-seasons-1-2-3-4/id1759355203?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/18/fe/63/18fe6346-2c68-71fd-a10b-fbd4a5ea4820/mza_2159681720137467017.jpg/300x300bb.png" 
-                                 alt="Betrayal: Seasons 1, 2, 3 & 4" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://podcasts.apple.com/us/podcast/betrayal-seasons-1-2-3-4/id1759355203?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Betrayal: Seasons 1, 2, 3 & 4
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">iHeartPodcasts and Glass Podcasts</p>
-                        
-                        <p class="item-description">Please join our Substack for additional exclusive content, curated book recommendations and community discussions. Sign up FREE by clicking this link ...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">True Crime</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2025-07-23</span>
+                            <span class="meta-date">2025-09-15</span>
                             
                         </div>
                     </div>
