@@ -170,6 +170,8 @@
     <meta name="msapplication-config" content="/browserconfig.xml">
     
         <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
@@ -177,11 +179,13 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
+            font-family: 'Lato', 'Segoe UI', sans-serif;
+            background: #ffffff;
             min-height: 100vh;
             padding: 2rem;
+            position: relative;
         }
+        
         
         .container {
             max-width: 1400px;
@@ -191,64 +195,58 @@
         .header {
             text-align: center;
             margin-bottom: 3rem;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.7)), 
+                        url('https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            backdrop-filter: blur(10px);
+            padding: 3.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            min-height: 200px;
+        }
+        
+        .header::before {
+            content: '⚜';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #1e40af, #3b82f6);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         
         .header h1 {
-            color: #2c3e50;
-            font-size: 3rem;
-            font-weight: 300;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            color: #1a202c;
+            font-size: 3.5rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            text-shadow: none;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .header p {
-            color: #6c757d;
-            font-size: 1.2rem;
-        }
-        
-        /* Country Selector Styles */
-        .country-selector {
-            margin-top: 1.25rem;
-            margin-bottom: 1.25rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .country-icons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
-        }
-        
-        .country-icon {
-            display: inline-block;
-            font-size: 2rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            border: 3px solid #ffffff;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-        }
-        
-        .country-icon:hover {
-            transform: translateY(-2px) scale(1.1);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
-            border-color: #007AFF;
+            color: #4a5568;
+            font-size: 1.3rem;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
         
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 0;
+            gap: 2px;
             margin-bottom: 2rem;
             width: 100%;
         }
@@ -257,34 +255,36 @@
             position: relative;
             border-radius: 0;
             overflow: hidden;
-            box-shadow: none;
-            transition: all 0.3s ease;
-            min-height: 300px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            min-height: 320px;
             color: white;
             text-decoration: none;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 2rem;
+            padding: 2.5rem;
             border: none;
         }
         
         .grid-item:hover {
-            transform: scale(1.02);
+            transform: translateY(-6px) scale(1.02);
             z-index: 1;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
         }
         
         .grid-item.featured {
             grid-row: span 2;
-            min-height: 600px;
+            min-height: 640px;
         }
         
-        .grid-item.color-1 { background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); }
-        .grid-item.color-2 { background: linear-gradient(135deg, #00cec9 0%, #0984e3 100%); }
-        .grid-item.color-3 { background: linear-gradient(135deg, #fd79a8 0%, #e17055 100%); }
-        .grid-item.color-4 { background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%); }
-        .grid-item.color-5 { background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%); }
-        .grid-item.color-6 { background: linear-gradient(135deg, #00b894 0%, #00cec9 100%); }
+        /* French sophisticated color palette */
+        .grid-item.color-1 { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); } /* Rouge */
+        .grid-item.color-2 { background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); } /* Bleu France */
+        .grid-item.color-3 { background: linear-gradient(135deg, #059669 0%, #047857 100%); } /* Vert Bouteille */
+        .grid-item.color-4 { background: linear-gradient(135deg, #b45309 0%, #92400e 100%); } /* Terre de Sienne */
+        .grid-item.color-5 { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); } /* Violet */
+        .grid-item.color-6 { background: linear-gradient(135deg, #374151 0%, #1f2937 100%); } /* Ardoise */
         
         .grid-item-image {
             position: absolute;
@@ -295,9 +295,10 @@
             background-size: cover;
             background-position: center;
             opacity: 0.8;
+            filter: sepia(5%) saturate(1.05) contrast(1.02);
         }
         
-        /* Add a gradient overlay for better text readability */
+        /* Add gradient overlay for text readability */
         .grid-item-image::after {
             content: '';
             position: absolute;
@@ -305,7 +306,7 @@
             left: 0;
             right: 0;
             height: 70%;
-            background: linear-gradient(transparent, rgba(0,0,0,0.6));
+            background: linear-gradient(transparent, rgba(0,0,0,0.75));
             z-index: 1;
         }
         
@@ -315,126 +316,91 @@
         }
         
         .grid-item h2 {
-            font-size: 1.6rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.6rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
             line-height: 1.2;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
         
         .grid-item.featured h2 {
-            font-size: 2rem;
+            font-size: 3.2rem;
         }
         
         .grid-item p {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
         
         .grid-item .date {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            font-weight: 300;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            font-size: 1rem;
+            opacity: 0.85;
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
         
         .no-pages {
             text-align: center;
             padding: 4rem 2rem;
-            color: #6c757d;
-            font-size: 1.2rem;
+            color: white;
+            font-size: 1.3rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
         }
         
         .footer {
             text-align: center;
-            color: #6c757d;
+            color: #666666;
             font-size: 1.1rem;
             margin-top: 3rem;
             font-style: italic;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.4;
+            line-height: 1.6;
+            padding: 2rem;
+            font-weight: 400;
         }
         
         @media (max-width: 768px) {
             .grid {
                 grid-template-columns: 1fr;
+                gap: 1px;
             }
             
             .grid-item.featured {
                 grid-row: span 1;
-                min-height: 300px;
+                min-height: 320px;
             }
             
             .grid-item h2 {
-                font-size: 1.4rem;
+                font-size: 2rem;
             }
             
             .grid-item.featured h2 {
-                font-size: 1.6rem;
+                font-size: 2.4rem;
             }
             
             .grid-item p {
-                font-size: 0.9rem;
-            }
-            
-            .grid-item .date {
-                font-size: 0.8rem;
+                font-size: 1.1rem;
             }
             
             .header h1 {
-                font-size: 1.5rem;
-            }
-            
-            .header p {
-                font-size: 1rem;
-            }
-            
-            .header {
-                margin-bottom: 2rem;
+                font-size: 2.8rem;
             }
             
             body {
                 padding: 1rem;
-            }
-            
-            .country-icons {
-                gap: 0.5rem;
-            }
-            
-            .country-icon {
-                width: 2.5rem;
-                height: 2.5rem;
-                font-size: 1.5rem;
-            }
-            
-            .country-selector {
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.3rem;
-                line-height: 1.3;
-            }
-            
-            .header p {
-                font-size: 0.9rem;
-                line-height: 1.4;
-            }
-            
-            .grid-item {
-                padding: 1.5rem;
-            }
-            
-            body {
-                padding: 0.75rem;
             }
         }
         
@@ -493,7 +459,7 @@
         </div>
         
         <div class="footer">
-            "It takes a minute to have a crush on someone, an hour to like someone, and a day to love someone... but it takes a lifetime to forget someone." — Kahlil Gibran
+            "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration. " — Nikola Tesla
         </div>
     </div>
 </body>

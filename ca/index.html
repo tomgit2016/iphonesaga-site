@@ -187,6 +187,8 @@
     <meta name="msapplication-config" content="/browserconfig.xml">
     
         <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
@@ -194,11 +196,13 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
+            font-family: 'Open Sans', 'Segoe UI', sans-serif;
+            background: #ffffff;
             min-height: 100vh;
             padding: 2rem;
+            position: relative;
         }
+        
         
         .container {
             max-width: 1400px;
@@ -208,64 +212,57 @@
         .header {
             text-align: center;
             margin-bottom: 3rem;
+            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.6)), 
+                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            backdrop-filter: blur(15px);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            border: 2px solid rgba(220,38,38,0.2);
+            position: relative;
+            min-height: 200px;
+        }
+        
+        .header::before {
+            content: '🍁';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #dc2626, #ef4444);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
         .header h1 {
-            color: #2c3e50;
-            font-size: 3rem;
-            font-weight: 300;
+            font-family: 'Montserrat', sans-serif;
+            color: #1f2937;
+            font-size: 3.2rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            text-shadow: none;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .header p {
-            color: #6c757d;
-            font-size: 1.2rem;
-        }
-        
-        /* Country Selector Styles */
-        .country-selector {
-            margin-top: 1.25rem;
-            margin-bottom: 1.25rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .country-icons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
-        }
-        
-        .country-icon {
-            display: inline-block;
-            font-size: 2rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            border: 3px solid #ffffff;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-        }
-        
-        .country-icon:hover {
-            transform: translateY(-2px) scale(1.1);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
-            border-color: #007AFF;
+            color: #374151;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
         
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 0;
+            gap: 2px;
             margin-bottom: 2rem;
             width: 100%;
         }
@@ -274,34 +271,36 @@
             position: relative;
             border-radius: 0;
             overflow: hidden;
-            box-shadow: none;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
             transition: all 0.3s ease;
-            min-height: 300px;
+            min-height: 320px;
             color: white;
             text-decoration: none;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             padding: 2rem;
-            border: none;
+            border: 1px solid rgba(255,255,255,0.1);
         }
         
         .grid-item:hover {
-            transform: scale(1.02);
+            transform: translateY(-5px);
             z-index: 1;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
         
         .grid-item.featured {
             grid-row: span 2;
-            min-height: 600px;
+            min-height: 640px;
         }
         
-        .grid-item.color-1 { background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); }
-        .grid-item.color-2 { background: linear-gradient(135deg, #00cec9 0%, #0984e3 100%); }
-        .grid-item.color-3 { background: linear-gradient(135deg, #fd79a8 0%, #e17055 100%); }
-        .grid-item.color-4 { background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%); }
-        .grid-item.color-5 { background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%); }
-        .grid-item.color-6 { background: linear-gradient(135deg, #00b894 0%, #00cec9 100%); }
+        /* Canadian nature-inspired color palette */
+        .grid-item.color-1 { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); } /* Maple Red */
+        .grid-item.color-2 { background: linear-gradient(135deg, #166534 0%, #15803d 100%); } /* Forest Green */
+        .grid-item.color-3 { background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); } /* Lake Blue */
+        .grid-item.color-4 { background: linear-gradient(135deg, #92400e 0%, #a16207 100%); } /* Autumn Orange */
+        .grid-item.color-5 { background: linear-gradient(135deg, #374151 0%, #4b5563 100%); } /* Rocky Grey */
+        .grid-item.color-6 { background: linear-gradient(135deg, #7c2d12 0%, #9a3412 100%); } /* Cedar Brown */
         
         .grid-item-image {
             position: absolute;
@@ -312,9 +311,10 @@
             background-size: cover;
             background-position: center;
             opacity: 0.8;
+            filter: saturate(1.1) contrast(1.05);
         }
         
-        /* Add a gradient overlay for better text readability */
+        /* Add gradient overlay for text readability */
         .grid-item-image::after {
             content: '';
             position: absolute;
@@ -322,7 +322,7 @@
             left: 0;
             right: 0;
             height: 70%;
-            background: linear-gradient(transparent, rgba(0,0,0,0.6));
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
             z-index: 1;
         }
         
@@ -332,126 +332,91 @@
         }
         
         .grid-item h2 {
-            font-size: 1.6rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.3rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
             line-height: 1.2;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            letter-spacing: -0.25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
         
         .grid-item.featured h2 {
-            font-size: 2rem;
+            font-size: 2.9rem;
         }
         
         .grid-item p {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.15rem;
+            opacity: 0.95;
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+            font-weight: 400;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
         
         .grid-item .date {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            font-weight: 300;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            font-size: 0.95rem;
+            opacity: 0.85;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
         
         .no-pages {
             text-align: center;
             padding: 4rem 2rem;
-            color: #6c757d;
-            font-size: 1.2rem;
+            color: white;
+            font-size: 1.25rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
         }
         
         .footer {
             text-align: center;
-            color: #6c757d;
+            color: #666666;
             font-size: 1.1rem;
             margin-top: 3rem;
             font-style: italic;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.4;
+            line-height: 1.6;
+            padding: 2rem;
+            font-weight: 400;
         }
         
         @media (max-width: 768px) {
             .grid {
                 grid-template-columns: 1fr;
+                gap: 1px;
             }
             
             .grid-item.featured {
                 grid-row: span 1;
-                min-height: 300px;
+                min-height: 320px;
             }
             
             .grid-item h2 {
-                font-size: 1.4rem;
+                font-size: 1.9rem;
             }
             
             .grid-item.featured h2 {
-                font-size: 1.6rem;
+                font-size: 2.2rem;
             }
             
             .grid-item p {
-                font-size: 0.9rem;
-            }
-            
-            .grid-item .date {
-                font-size: 0.8rem;
+                font-size: 1.05rem;
             }
             
             .header h1 {
-                font-size: 1.5rem;
-            }
-            
-            .header p {
-                font-size: 1rem;
-            }
-            
-            .header {
-                margin-bottom: 2rem;
+                font-size: 2.5rem;
             }
             
             body {
                 padding: 1rem;
-            }
-            
-            .country-icons {
-                gap: 0.5rem;
-            }
-            
-            .country-icon {
-                width: 2.5rem;
-                height: 2.5rem;
-                font-size: 1.5rem;
-            }
-            
-            .country-selector {
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.3rem;
-                line-height: 1.3;
-            }
-            
-            .header p {
-                font-size: 0.9rem;
-                line-height: 1.4;
-            }
-            
-            .grid-item {
-                padding: 1.5rem;
-            }
-            
-            body {
-                padding: 0.75rem;
             }
         }
         
@@ -518,7 +483,7 @@
         </div>
         
         <div class="footer">
-            "If you think adventure is dangerous, try routine; it is lethal." — Paulo Coelho
+            "Take away love and our earth is a tomb." — Robert Browning
         </div>
     </div>
 </body>
