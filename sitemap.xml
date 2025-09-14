@@ -59,6 +59,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://iphonesaga.com/Top_Movie.html</loc>
+    <lastmod>2025-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://iphonesaga.com/Top_Music_Videos.html</loc>
     <lastmod>2025-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -108,12 +114,6 @@
   </url>
   <url>
     <loc>https://iphonesaga.com/Top_Albums.html</loc>
-    <lastmod>2025-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://iphonesaga.com/Top_Movie.html</loc>
     <lastmod>2025-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
