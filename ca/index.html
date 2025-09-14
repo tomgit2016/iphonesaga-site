@@ -86,12 +86,46 @@
         "@type": "ItemList",
         "name": "Apple Ecosystem Top Charts",
         "description": "Trending content across iTunes, App Store, Apple TV, and Mac apps",
-        "numberOfItems": "2",
+        "numberOfItems": "4",
         "itemListOrder": "https://schema.org/ItemListOrderDescending",
         "itemListElement": [
         {
                 "@type": "ListItem",
                 "position": 1,
+                "item": {
+                        "@type": "CreativeWork",
+                        "name": "Top Songs",
+                        "description": "CHARLIE",
+                        "url": "https://iphonesaga.com/ca/Top_Songs.html",
+                        "dateModified": "2025-09-14",
+                        "category": "Apple Content",
+                        "publisher": {
+                                "@type": "Organization",
+                                "name": "Apple Universe Top 20 Charts"
+                        },
+                        "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b2/a4/1d/b2a41d04-f469-c49a-bcdd-6db0d5998712/656465286079_cover.jpg/300x300bb.png"
+                }
+        },
+        {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                        "@type": "CreativeWork",
+                        "name": "Top Paid Apps",
+                        "description": "Minecraft: Dream it, Build it!",
+                        "url": "https://iphonesaga.com/ca/Top_Paid_Apps.html",
+                        "dateModified": "2025-09-14",
+                        "category": "App Store Apps",
+                        "publisher": {
+                                "@type": "Organization",
+                                "name": "Apple Universe Top 20 Charts"
+                        },
+                        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/48/d0/37/48d0370e-cc6c-f1e2-1d36-6322809ba598/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/300x300bb.png"
+                }
+        },
+        {
+                "@type": "ListItem",
+                "position": 3,
                 "item": {
                         "@type": "CreativeWork",
                         "name": "Top Music Videos",
@@ -108,7 +142,7 @@
         },
         {
                 "@type": "ListItem",
-                "position": 2,
+                "position": 4,
                 "item": {
                         "@type": "CreativeWork",
                         "name": "Top Podcasts",
@@ -170,6 +204,45 @@
         .header p {
             color: #6c757d;
             font-size: 1.2rem;
+        }
+        
+        /* Country Selector Styles */
+        .country-selector {
+            margin-top: 1.25rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .country-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        
+        .country-icon {
+            display: inline-block;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .country-icon:hover {
+            transform: translateY(-2px) scale(1.1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
+            border-color: #007AFF;
         }
         
         .grid {
@@ -328,6 +401,21 @@
             body {
                 padding: 1rem;
             }
+            
+            .country-icons {
+                gap: 0.5rem;
+            }
+            
+            .country-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.5rem;
+            }
+            
+            .country-selector {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -363,12 +451,52 @@
         <div class="header">
             <h1>Apple Universe Top 20 Charts - Canada</h1>
             <p>Your gateway to the hottest trends across Apple's entire ecosystem — from chart-topping hits to must-have apps</p>
+            
+            <!-- Country Selection Icons -->
+            <div class="country-selector">
+                <div class="country-icons">
+                    <a href="ca/" class="country-icon" title="Canada">
+                        🇨🇦
+                    </a>
+                    <a href="jp/" class="country-icon" title="Japan">
+                        🇯🇵
+                    </a>
+                    <a href="uk/" class="country-icon" title="United Kingdom">
+                        🇬🇧
+                    </a>
+                    <a href="au/" class="country-icon" title="Australia">
+                        🇦🇺
+                    </a>
+                    <a href="fr/" class="country-icon" title="France">
+                        🇫🇷
+                    </a>
+                    <a href="de/" class="country-icon" title="Germany">
+                        🇩🇪
+                    </a>
+                </div>
+            </div>
         </div>
         
         
         <div class="grid">
             
-            <a href="Top_Music_Videos.html" class="grid-item color-1 featured">
+            <a href="Top_Songs.html" class="grid-item color-1 featured">
+                <div class="grid-item-image" style="background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b2/a4/1d/b2a41d04-f469-c49a-bcdd-6db0d5998712/656465286079_cover.jpg/300x300bb.png');"></div>
+                <div class="grid-item-content">
+                    <h2>Top Songs</h2>
+                    <p><strong><em>CHARLIE</em></strong></p>
+                    <div class="date">Updated on September 14, 2025</div>
+                </div>
+            </a>
+            <a href="Top_Paid_Apps.html" class="grid-item color-2 ">
+                <div class="grid-item-image" style="background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/48/d0/37/48d0370e-cc6c-f1e2-1d36-6322809ba598/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/300x300bb.png');"></div>
+                <div class="grid-item-content">
+                    <h2>Top Paid Apps</h2>
+                    <p><strong><em>Minecraft: Dream it, Build it!</em></strong></p>
+                    <div class="date">Updated on September 14, 2025</div>
+                </div>
+            </a>
+            <a href="Top_Music_Videos.html" class="grid-item color-3 ">
                 <div class="grid-item-image" style="background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/01/f5/81/01f58141-c9f1-f46b-7fc9-8874824313b7/20UMGIM86725.crop.jpg/300x300bb.png');"></div>
                 <div class="grid-item-content">
                     <h2>Top Music Videos</h2>
@@ -376,7 +504,7 @@
                     <div class="date">Updated on September 13, 2025</div>
                 </div>
             </a>
-            <a href="Top_Podcasts.html" class="grid-item color-2 ">
+            <a href="Top_Podcasts.html" class="grid-item color-4 ">
                 <div class="grid-item-image" style="background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ab/64/66/ab6466a9-9a7d-e20e-7a3d-bc5be37d29ce/mza_15084852813176276273.jpg/300x300bb.png');"></div>
                 <div class="grid-item-content">
                     <h2>Top Podcasts</h2>
@@ -387,7 +515,7 @@
         </div>
         
         <div class="footer">
-            "What the caterpillar calls the end of the world, the master calls a butterfly." — Richard Bach
+            "The only way to do great work is to love what you do." — Steve Jobs
         </div>
     </div>
 </body>
