@@ -346,15 +346,8 @@
         .country-selector {
             margin-top: 2rem;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            gap: 1rem;
-        }
-        
-        .country-label {
-            color: #6c757d;
-            font-size: 1rem;
-            font-weight: 500;
         }
         
         .country-icons {
@@ -365,31 +358,16 @@
         }
         
         .country-icon {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.6rem 1rem;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 25px;
+            display: inline-block;
+            font-size: 2rem;
             text-decoration: none;
-            color: #2c3e50;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 2px solid transparent;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         }
         
         .country-icon:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-            border-color: #007AFF;
-            background: rgba(255, 255, 255, 1);
-        }
-        
-        .country-name {
-            font-size: 0.85rem;
-            letter-spacing: 0.3px;
+            transform: translateY(-2px) scale(1.1);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
         }
         
         .grid {
@@ -554,12 +532,7 @@
             }
             
             .country-icon {
-                padding: 0.5rem 0.75rem;
-                font-size: 0.8rem;
-            }
-            
-            .country-name {
-                font-size: 0.75rem;
+                font-size: 1.5rem;
             }
         }
         
@@ -599,25 +572,24 @@
             
             <!-- Country Selection Icons -->
             <div class="country-selector">
-                <div class="country-label">Explore by Region:</div>
                 <div class="country-icons">
                     <a href="ca/" class="country-icon" title="Canada">
-                        🇨🇦 <span class="country-name">Canada</span>
+                        ⭕🇨🇦
                     </a>
                     <a href="jp/" class="country-icon" title="Japan">
-                        🇯🇵 <span class="country-name">Japan</span>
+                        ⭕🇯🇵
                     </a>
                     <a href="uk/" class="country-icon" title="United Kingdom">
-                        🇬🇧 <span class="country-name">UK</span>
+                        ⭕🇬🇧
                     </a>
                     <a href="au/" class="country-icon" title="Australia">
-                        🇦🇺 <span class="country-name">Australia</span>
+                        ⭕🇦🇺
                     </a>
                     <a href="fr/" class="country-icon" title="France">
-                        🇫🇷 <span class="country-name">France</span>
+                        ⭕🇫🇷
                     </a>
                     <a href="de/" class="country-icon" title="Germany">
-                        🇩🇪 <span class="country-name">Germany</span>
+                        ⭕🇩🇪
                     </a>
                 </div>
             </div>
@@ -725,7 +697,7 @@
         </div>
         
         <div class="footer">
-            "The biggest challenge after success is shutting up about it." — Criss Jami
+            "Elegance does not consist in putting on a new dress." — Coco Chanel
         </div>
     </div>
 </body>
