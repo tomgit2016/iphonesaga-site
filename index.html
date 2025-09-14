@@ -362,12 +362,22 @@
             font-size: 2rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
         }
         
         .country-icon:hover {
             transform: translateY(-2px) scale(1.1);
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
+            border-color: #007AFF;
         }
         
         .grid {
@@ -532,6 +542,8 @@
             }
             
             .country-icon {
+                width: 2.5rem;
+                height: 2.5rem;
                 font-size: 1.5rem;
             }
         }
@@ -574,22 +586,22 @@
             <div class="country-selector">
                 <div class="country-icons">
                     <a href="ca/" class="country-icon" title="Canada">
-                        ⭕🇨🇦
+                        🇨🇦
                     </a>
                     <a href="jp/" class="country-icon" title="Japan">
-                        ⭕🇯🇵
+                        🇯🇵
                     </a>
                     <a href="uk/" class="country-icon" title="United Kingdom">
-                        ⭕🇬🇧
+                        🇬🇧
                     </a>
                     <a href="au/" class="country-icon" title="Australia">
-                        ⭕🇦🇺
+                        🇦🇺
                     </a>
                     <a href="fr/" class="country-icon" title="France">
-                        ⭕🇫🇷
+                        🇫🇷
                     </a>
                     <a href="de/" class="country-icon" title="Germany">
-                        ⭕🇩🇪
+                        🇩🇪
                     </a>
                 </div>
             </div>
@@ -697,7 +709,7 @@
         </div>
         
         <div class="footer">
-            "Elegance does not consist in putting on a new dress." — Coco Chanel
+            "Disobedience is the true foundation of liberty. The obedient must be slaves." — Henry David Thoreau
         </div>
     </div>
 </body>
