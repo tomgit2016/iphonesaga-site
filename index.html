@@ -342,6 +342,56 @@
             font-size: 1.2rem;
         }
         
+        /* Country Selector Styles */
+        .country-selector {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .country-label {
+            color: #6c757d;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        .country-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        
+        .country-icon {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .country-icon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            border-color: #007AFF;
+            background: rgba(255, 255, 255, 1);
+        }
+        
+        .country-name {
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+        }
+        
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -498,6 +548,19 @@
             body {
                 padding: 1rem;
             }
+            
+            .country-icons {
+                gap: 0.5rem;
+            }
+            
+            .country-icon {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.8rem;
+            }
+            
+            .country-name {
+                font-size: 0.75rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -533,6 +596,31 @@
         <div class="header">
             <h1>Apple Universe Top 20 Charts</h1>
             <p>Your gateway to the hottest trends across Apple's entire ecosystem — from chart-topping hits to must-have apps</p>
+            
+            <!-- Country Selection Icons -->
+            <div class="country-selector">
+                <div class="country-label">Explore by Region:</div>
+                <div class="country-icons">
+                    <a href="ca/" class="country-icon" title="Canada">
+                        🇨🇦 <span class="country-name">Canada</span>
+                    </a>
+                    <a href="jp/" class="country-icon" title="Japan">
+                        🇯🇵 <span class="country-name">Japan</span>
+                    </a>
+                    <a href="uk/" class="country-icon" title="United Kingdom">
+                        🇬🇧 <span class="country-name">UK</span>
+                    </a>
+                    <a href="au/" class="country-icon" title="Australia">
+                        🇦🇺 <span class="country-name">Australia</span>
+                    </a>
+                    <a href="fr/" class="country-icon" title="France">
+                        🇫🇷 <span class="country-name">France</span>
+                    </a>
+                    <a href="de/" class="country-icon" title="Germany">
+                        🇩🇪 <span class="country-name">Germany</span>
+                    </a>
+                </div>
+            </div>
         </div>
         
         
@@ -637,7 +725,7 @@
         </div>
         
         <div class="footer">
-            "The only way to do great work is to love what you do." — Steve Jobs
+            "The biggest challenge after success is shutting up about it." — Criss Jami
         </div>
     </div>
 </body>
