@@ -94,16 +94,16 @@
                 "position": 1,
                 "item": {
                         "@type": "CreativeWork",
-                        "name": "Top Songs",
-                        "description": "CHARLIE",
-                        "url": "https://iphonesaga.com/Top_Songs.html",
-                        "dateModified": "2025-09-15",
+                        "name": "Top Movies",
+                        "description": "Weapons",
+                        "url": "https://iphonesaga.com/Top_Movie.html",
+                        "dateModified": "2025-09-16",
                         "category": "Apple Content",
                         "publisher": {
                                 "@type": "Organization",
                                 "name": "Apple Universe Top 20 Charts"
                         },
-                        "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b2/a4/1d/b2a41d04-f469-c49a-bcdd-6db0d5998712/656465286079_cover.jpg/300x300bb.png"
+                        "image": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/57/8e/9c/578e9ce2-b2f5-5a58-d556-0c87b1d2ad07/Weapons_STD_APO_V_DD_KA_TT_2000x3000_300dpi_EN.png/300x300bb.png"
                 }
         },
         {
@@ -114,7 +114,7 @@
                         "name": "Top Paid Apps",
                         "description": "Minecraft: Dream it, Build it!",
                         "url": "https://iphonesaga.com/Top_Paid_Apps.html",
-                        "dateModified": "2025-09-15",
+                        "dateModified": "2025-09-16",
                         "category": "App Store Apps",
                         "publisher": {
                                 "@type": "Organization",
@@ -128,16 +128,16 @@
                 "position": 3,
                 "item": {
                         "@type": "CreativeWork",
-                        "name": "Top Movies",
-                        "description": "Weapons",
-                        "url": "https://iphonesaga.com/Top_Movie.html",
-                        "dateModified": "2025-09-14",
+                        "name": "Top Songs",
+                        "description": "CHARLIE",
+                        "url": "https://iphonesaga.com/Top_Songs.html",
+                        "dateModified": "2025-09-15",
                         "category": "Apple Content",
                         "publisher": {
                                 "@type": "Organization",
                                 "name": "Apple Universe Top 20 Charts"
                         },
-                        "image": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/57/8e/9c/578e9ce2-b2f5-5a58-d556-0c87b1d2ad07/Weapons_STD_APO_V_DD_KA_TT_2000x3000_300dpi_EN.png/300x300bb.png"
+                        "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b2/a4/1d/b2a41d04-f469-c49a-bcdd-6db0d5998712/656465286079_cover.jpg/300x300bb.png"
                 }
         },
         {
@@ -370,6 +370,45 @@
             text-shadow: 0 0 10px #ff00ff;
         }
         
+        /* Country Selector Styles */
+        .country-selector {
+            margin-top: 1.25rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .country-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        
+        .country-icon {
+            display: inline-block;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .country-icon:hover {
+            transform: translateY(-2px) scale(1.1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
+            border-color: #007AFF;
+        }
+
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -560,6 +599,59 @@
             body {
                 padding: 1rem;
             }
+                        
+            .country-icons {
+                gap: 0.5rem;
+            }
+            
+            .country-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.5rem;
+            }
+            
+            .country-selector {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+        
+                @media (max-width: 480px) {
+            .header h1 {
+                font-size: 0.95rem;
+                line-height: 1.2;
+                margin-bottom: 0.3rem;
+                letter-spacing: -0.3px;
+            }
+            
+            .header p {
+                font-size: 0.75rem;
+                line-height: 1.3;
+            }
+            
+            .header {
+                margin-bottom: 1.2rem;
+                padding: 0 0.25rem;
+            }
+            
+            .grid-item {
+                padding: 1.5rem;
+            }
+            
+            body {
+                padding: 0.75rem;
+            }
+            
+            .country-icon {
+                width: 2rem;
+                height: 2rem;
+                font-size: 1.2rem;
+            }
+            
+            .country-selector {
+                margin-top: 0.75rem;
+                margin-bottom: 0.75rem;
+            }
         }
         
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -604,12 +696,12 @@
         
         <div class="grid">
             
-            <a href="Top_Songs.html" class="grid-item color-1 featured">
-                <div class="grid-item-image" style="background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b2/a4/1d/b2a41d04-f469-c49a-bcdd-6db0d5998712/656465286079_cover.jpg/300x300bb.png');"></div>
+            <a href="Top_Movie.html" class="grid-item color-1 featured">
+                <div class="grid-item-image" style="background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/57/8e/9c/578e9ce2-b2f5-5a58-d556-0c87b1d2ad07/Weapons_STD_APO_V_DD_KA_TT_2000x3000_300dpi_EN.png/300x300bb.png');"></div>
                 <div class="grid-item-content">
-                    <h2>Top Songs</h2>
-                    <p><strong><em>CHARLIE</em></strong></p>
-                    <div class="date">Updated on September 15, 2025</div>
+                    <h2>Top Movies</h2>
+                    <p><strong><em>Weapons</em></strong></p>
+                    <div class="date">Updated on September 16, 2025</div>
                 </div>
             </a>
             <a href="Top_Paid_Apps.html" class="grid-item color-2 ">
@@ -617,15 +709,15 @@
                 <div class="grid-item-content">
                     <h2>Top Paid Apps</h2>
                     <p><strong><em>Minecraft: Dream it, Build it!</em></strong></p>
-                    <div class="date">Updated on September 15, 2025</div>
+                    <div class="date">Updated on September 16, 2025</div>
                 </div>
             </a>
-            <a href="Top_Movie.html" class="grid-item color-3 ">
-                <div class="grid-item-image" style="background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/57/8e/9c/578e9ce2-b2f5-5a58-d556-0c87b1d2ad07/Weapons_STD_APO_V_DD_KA_TT_2000x3000_300dpi_EN.png/300x300bb.png');"></div>
+            <a href="Top_Songs.html" class="grid-item color-3 ">
+                <div class="grid-item-image" style="background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b2/a4/1d/b2a41d04-f469-c49a-bcdd-6db0d5998712/656465286079_cover.jpg/300x300bb.png');"></div>
                 <div class="grid-item-content">
-                    <h2>Top Movies</h2>
-                    <p><strong><em>Weapons</em></strong></p>
-                    <div class="date">Updated on September 14, 2025</div>
+                    <h2>Top Songs</h2>
+                    <p><strong><em>CHARLIE</em></strong></p>
+                    <div class="date">Updated on September 15, 2025</div>
                 </div>
             </a>
             <a href="Top_Podcasts.html" class="grid-item color-4 ">
