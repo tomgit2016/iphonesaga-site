@@ -14,7 +14,7 @@
     <meta http-equiv="Cache-Control" content="public, max-age=3600">
     <meta http-equiv="Expires" content="3600">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itunes Store: Top Free Apps - September 10, 2025</title>
+    <title>Itunes Store: Top Free Apps - September 17, 2025</title>
     <style>
 /* Reset and base styles */
 * {
@@ -145,6 +145,50 @@ body {
     font-size: 0.75rem;
 }
 
+/* Header social media icons */
+.header-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.header-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.header-social-icon svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+    transition: transform 0.2s ease;
+}
+
+.header-social-icon:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-social-icon:hover svg {
+    transform: scale(1.1);
+}
+
+.header-social-icon:active {
+    transform: scale(1.05);
+}
+
 /* Main content */
 .main-content {
     max-width: 1200px;
@@ -273,6 +317,104 @@ body {
     color: #27ae60 !important;
 }
 
+/* Page-level social media sharing styles */
+.page-social-share {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+}
+
+.social-share-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.share-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    min-width: fit-content;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.social-icon:hover svg {
+    transform: scale(1.1);
+}
+
+.social-icon:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Platform-specific colors */
+.social-icon.twitter {
+    background: #1da1f2;
+}
+.social-icon.twitter:hover {
+    background: #0d8bd9;
+}
+
+.social-icon.facebook {
+    background: #1877f2;
+}
+.social-icon.facebook:hover {
+    background: #0c63d4;
+}
+
+.social-icon.whatsapp {
+    background: #25d366;
+}
+.social-icon.whatsapp:hover {
+    background: #20c75a;
+}
+
+.social-icon.line {
+    background: #00c300;
+}
+.social-icon.line:hover {
+    background: #00b300;
+}
+
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -309,6 +451,21 @@ body {
         font-size: 0.7rem;
     }
     
+    .header-social-icons {
+        gap: 0.4rem;
+        margin-top: 0.75rem;
+    }
+    
+    .header-social-icon {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .header-social-icon svg {
+        width: 11px;
+        height: 11px;
+    }
+    
     .content-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -320,6 +477,33 @@ body {
     
     .main-content {
         padding: 0 0.5rem;
+    }
+    
+    .page-social-share {
+        padding: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .social-share-section {
+        gap: 0.6rem;
+    }
+    
+    .share-label {
+        font-size: 0.8rem;
+    }
+    
+    .social-icons {
+        gap: 0.35rem;
+    }
+    
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .social-icon svg {
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -363,12 +547,58 @@ body {
         font-size: 0.65rem;
     }
     
+    .header-social-icons {
+        gap: 0.3rem;
+        margin-top: 0.5rem;
+    }
+    
+    .header-social-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .header-social-icon svg {
+        width: 10px;
+        height: 10px;
+    }
+    
     .item-content {
         padding: 1rem;
     }
     
     .item-title {
         font-size: 1.1rem;
+    }
+    
+    .page-social-share {
+        padding: 0.75rem;
+        margin-bottom: 1.25rem;
+        border-radius: 10px;
+    }
+    
+    .social-share-section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .share-label {
+        font-size: 0.8rem;
+    }
+    
+    .social-icons {
+        gap: 0.3rem;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .social-icon svg {
+        width: 15px;
+        height: 15px;
     }
 }
 
@@ -388,7 +618,7 @@ body {
             <div class="header-main">
                 <h1><span class="header-icon">📱</span>Itunes Store: Top Free Apps</h1>
                 <div class="subtitle-container">
-                    <p class="subtitle">Updated on September 10, 2025</p>
+                    <p class="subtitle">Updated on September 17, 2025</p>
                     <div class="header-button-container">
                         <a href="index.html" class="more-trends-btn" title="View all iTunes trends and charts">
                             <span class="btn-icon">📊</span>
@@ -396,52 +626,40 @@ body {
                         </a>
                     </div>
                 </div>
+                <!-- Small social media icons in header -->
+                
+                
+                
+                
+                <div class="header-social-icons">
+                    <a href="https://twitter.com/intent/tweet?url=https://iphonesaga.com&text=Google%20Gemini%20tops%20the%20Free%20Apps%20chart%20this%20week%21" target="_blank" rel="noopener" class="header-social-icon" title="Share on X (Twitter)">
+                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://iphonesaga.com" target="_blank" rel="noopener" class="header-social-icon" title="Share on Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://wa.me/?text=Google%20Gemini%20tops%20the%20Free%20Apps%20chart%20this%20week%21%20https://iphonesaga.com" target="_blank" rel="noopener" class="header-social-icon" title="Share on WhatsApp">
+                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+                    </a>
+                    <a href="https://line.me/R/msg/text/?Google%20Gemini%20tops%20the%20Free%20Apps%20chart%20this%20week%21%20https://iphonesaga.com" target="_blank" rel="noopener" class="header-social-icon" title="Share on LINE">
+                        <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                    </a>
+                </div>
+                
             </div>
         </div>
     </header>
     
     <main class="main-content">
         
+        
         <section class="category-section">
             <div class="content-grid">
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/chatgpt/id6448311069?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c0/0d/52/c00d5200-f1bd-1714-f706-a7d93d874681/AppIcon-0-0-1x_U007epad-0-0-0-1-0-85-220.png/300x300bb.png" 
-                                 alt="ChatGPT" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/chatgpt/id6448311069?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                ChatGPT
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">OpenAI</p>
-                        
-                        <p class="item-description">Introducing ChatGPT for iOS: OpenAI’s latest advancements at your fingertips. This official app is free, syncs your history across devices, and brings...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Productivity</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2023-05-18</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
                         <a href="https://apps.apple.com/us/app/google-gemini/id6477489729?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ba/a0/82/baa08236-0078-b4e5-e56b-1ef638d192c6/AppIcon-0-1x_U007epad-0-0-0-1-0-0-0-85-220-0.png/300x300bb.png" 
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cf/5f/4d/cf5f4d5e-c15e-2f86-50c2-ae68ecd85ae8/AppIcon-0-1x_U007epad-0-0-0-1-0-0-0-85-220-0.png/300x300bb.png" 
                                  alt="Google Gemini" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
@@ -473,8 +691,41 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/chatgpt/id6448311069?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7d/e7/2f/7de72fe9-9025-fe7f-c827-be6d463b4db0/AppIcon-0-0-1x_U007epad-0-0-0-1-0-85-220.png/300x300bb.png" 
+                                 alt="ChatGPT" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/chatgpt/id6448311069?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                ChatGPT
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">OpenAI</p>
+                        
+                        <p class="item-description">Introducing ChatGPT for iOS: OpenAI’s latest advancements at your fingertips. This official app is free, syncs your history across devices, and brings...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Productivity</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2023-05-18</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
                         <a href="https://apps.apple.com/us/app/threads/id6446901002?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f7/b2/2b/f7b22b78-29e4-1a69-70b9-34e7ae38cafb/Prod-0-0-1x_U007emarketing-0-0-0-8-0-0-85-220.png/300x300bb.png" 
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/34/be/a3/34bea37c-fbf8-3324-56cd-39e17d26f68d/Prod-0-0-1x_U007ephone-0-0-0-1-0-0-85-220.png/300x300bb.png" 
                                  alt="Threads" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
@@ -507,7 +758,7 @@ body {
                 <article class="content-item">
                     <div class="item-image">
                         <a href="https://apps.apple.com/us/app/google/id284815942?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f3/d7/c6/f3d7c6d3-614a-7716-2091-581e6c4fbd05/logo_gsa_gradient_ios_color-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-0-85-220-0.png/300x300bb.png" 
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1b/2f/b91b2fe5-6bd5-c34e-467e-3edc6e3d6de3/logo_gsa_gradient_ios_color-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-0-85-220-0.png/300x300bb.png" 
                                  alt="Google" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
@@ -539,32 +790,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/x/id333903271?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/d4/63/fad463a1-155f-c1c2-d462-5f6abb7ce9ca/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/300x300bb.png" 
-                                 alt="X" 
+                        <a href="https://apps.apple.com/us/app/bible-chat-daily-devotional/id6448849666?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/10/a7/6d/10a76da4-cd37-fe5d-88dc-2463c36fb1ca/AppIcon-0-0-1x_U007epad-0-1-0-85-220.jpeg/300x300bb.png" 
+                                 alt="Bible Chat: Daily Devotional" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/x/id333903271?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                X
+                            <a href="https://apps.apple.com/us/app/bible-chat-daily-devotional/id6448849666?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Bible Chat: Daily Devotional
                             </a>
                         </h3>
                         
-                        <p class="item-artist">X Corp.</p>
+                        <p class="item-artist">Bookvitals APP SRL</p>
                         
-                        <p class="item-description">Welcome to X (formerly known as Twitter), your trusted digital town square where conversations unfold in real time, and the world connects through bre...</p>
+                        <p class="item-description">Bible Chat: Built for Christians Who Want to Hear God in the Noise of Everyday Life Have you made time for God’s Word today? Join millions of believer...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">News</span>
+                            <span class="meta-genre">Reference</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2009-10-09</span>
+                            <span class="meta-date">2023-05-11</span>
                             
                         </div>
                     </div>
@@ -605,32 +856,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/ticketmaster-buy-sell-tickets/id500003565?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/85/87/068587f7-ae59-e8c2-b22c-56c6a7cf3157/AppIcon-0-0-1x_U007emarketing-0-1-0-85-220.png/300x300bb.png" 
-                                 alt="Ticketmaster－Buy, Sell Tickets" 
+                        <a href="https://apps.apple.com/us/app/insomnia-cookies/id891379973?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fb/e7/20/fbe7209d-53fe-7c41-cc84-1055e12e733c/AppIcon-0-1x_U007emarketing-0-11-0-85-220-0.png/300x300bb.png" 
+                                 alt="Insomnia Cookies" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/ticketmaster-buy-sell-tickets/id500003565?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Ticketmaster－Buy, Sell Tickets
+                            <a href="https://apps.apple.com/us/app/insomnia-cookies/id891379973?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Insomnia Cookies
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Ticketmaster</p>
+                        <p class="item-artist">Insomnia Cookies LLC</p>
                         
-                        <p class="item-description">The Ticketmaster app makes it easier to buy, sell, and get into the very best of live entertainment - so you can get on with making memories that last...</p>
+                        <p class="item-description">Satisfy your late-night cookie cravings with the Insomnia Cookies Online Ordering App! Discover your nearest Insomnia Cookies location and seamlessly ...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Entertainment</span>
+                            <span class="meta-genre">Food & Drink</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2012-02-22</span>
+                            <span class="meta-date">2014-06-28</span>
                             
                         </div>
                     </div>
@@ -638,98 +889,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/icardiac-heart-health-monitor/id6468660073?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9c/21/13/9c211342-976c-6ae8-572a-cb572ddcd47b/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/300x300bb.png" 
-                                 alt="iCardiac: Heart Health Monitor" 
+                        <a href="https://apps.apple.com/us/app/x/id333903271?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5d/88/82/5d8882c6-0354-7c06-49f6-4239101bb678/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/300x300bb.png" 
+                                 alt="X" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/icardiac-heart-health-monitor/id6468660073?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                iCardiac: Heart Health Monitor
+                            <a href="https://apps.apple.com/us/app/x/id333903271?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                X
                             </a>
                         </h3>
                         
-                        <p class="item-artist">BEGAMOB GLOBAL LIMITED</p>
+                        <p class="item-artist">X Corp.</p>
                         
-                        <p class="item-description">iCardiac: Your Personal Heart Health Companion Your heart is the engine of your life. iCardiac, the premier heart monitor, heart rate tracker, and pul...</p>
+                        <p class="item-description">Welcome to X (formerly known as Twitter), your trusted digital town square where conversations unfold in real time, and the world connects through bre...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Health & Fitness</span>
+                            <span class="meta-genre">News</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2023-10-16</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/tea-dating-advice/id6444453051?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/37/4a/ce/374acec7-7edb-bcf7-9e1b-9b001a6226e7/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/300x300bb.png" 
-                                 alt="Tea Dating Advice" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/tea-dating-advice/id6444453051?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Tea Dating Advice
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Tea Dating Advice Inc.</p>
-                        
-                        <p class="item-description">Tea was built for one mission: helping women date safely. For too long, women’s safety has been an afterthought in dating — we’re changing that. Tea o...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Lifestyle</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2023-01-12</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/microsoft-teams/id1113153706?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3c/a7/ae/3ca7aeac-e52f-83c1-2c5e-13a8cfca9bb0/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/300x300bb.png" 
-                                 alt="Microsoft Teams" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/microsoft-teams/id1113153706?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Microsoft Teams
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Microsoft Corporation</p>
-                        
-                        <p class="item-description">Whether you’re connecting with your community for an upcoming activity or working with teammates on a project, Microsoft Teams helps bring people toge...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Business</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2016-11-02</span>
+                            <span class="meta-date">2009-10-09</span>
                             
                         </div>
                     </div>
@@ -738,7 +923,7 @@ body {
                 <article class="content-item">
                     <div class="item-image">
                         <a href="https://apps.apple.com/us/app/whatsapp-messenger/id310633997?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ea/3f/f4/ea3ff4e7-fcf8-ee4a-35ee-17a421dade7e/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-85-220.png/300x300bb.png" 
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/85/4e/57/854e570b-fae9-4cec-c91e-714464378c74/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-85-220.png/300x300bb.png" 
                                  alt="WhatsApp Messenger" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
@@ -770,131 +955,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/telegram-messenger/id686449807?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/f3/5e/99f35e1a-af53-9267-8d98-89838bab359a/AppIconLLC-0-0-1x_U007emarketing-0-8-0-85-220.png/300x300bb.png" 
-                                 alt="Telegram Messenger" 
+                        <a href="https://apps.apple.com/us/app/tiktok-videos-shop-live/id835599320?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7d/97/56/7d9756d9-eb5e-c557-d79e-3b0157fef4d2/AppIcon_TikTok-0-0-1x_U007epad-0-1-0-0-85-220.png/300x300bb.png" 
+                                 alt="TikTok" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/telegram-messenger/id686449807?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Telegram Messenger
+                            <a href="https://apps.apple.com/us/app/tiktok-videos-shop-live/id835599320?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                TikTok
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Telegram FZ-LLC</p>
+                        <p class="item-artist">TikTok Ltd.</p>
                         
-                        <p class="item-description">Pure instant messaging — simple, fast, secure, and synced across all your devices. One of the top 5 most downloaded apps in the world with over 1 bill...</p>
+                        <p class="item-description">TikTok is THE destination for mobile videos. On TikTok, short-form videos are exciting, spontaneous, and genuine. Whether you’re a sports fanatic, a p...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Social Networking</span>
+                            <span class="meta-genre">Entertainment</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2013-08-14</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/perplexity-ask-anything/id1668000334?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6f/1e/1b/6f1e1b22-3657-105c-2736-53a7311d108f/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220-0.png/300x300bb.png" 
-                                 alt="Perplexity" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/perplexity-ask-anything/id1668000334?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Perplexity
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Perplexity AI, Inc.</p>
-                        
-                        <p class="item-description">Perplexity—Where Knowledge Begins. Accurate answers to any question, backed by sources and citations. Cut through the clutter and get straight to cred...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Productivity</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2023-03-27</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/microsoft-authenticator/id983156458?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6f/c6/5e/6fc65ef5-4ae2-476f-f9e6-6b5fb0a19ec3/AppIcon-0-1x_U007emarketing-0-11-0-sRGB-85-220-0.png/300x300bb.png" 
-                                 alt="Microsoft Authenticator" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/microsoft-authenticator/id983156458?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Microsoft Authenticator
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Microsoft Corporation</p>
-                        
-                        <p class="item-description">Use Microsoft Authenticator for easy, secure sign-ins for all your online accounts using multi-factor authentication, passwordless, or password autofi...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Productivity</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2015-05-30</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="content-item">
-                    <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/google-maps/id585027354?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4f/f0/6f/4ff06fac-4ab7-9860-83df-d31f1901730a/logo_maps_ios_color-0-1x_U007emarketing-0-0-0-7-0-0-0-0-85-220-0.png/300x300bb.png" 
-                                 alt="Google Maps" 
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
-                        </a>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/google-maps/id585027354?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Google Maps
-                            </a>
-                        </h3>
-                        
-                        <p class="item-artist">Google</p>
-                        
-                        <p class="item-description">Explore and navigate the world with confidence using Google Maps. Find the best routes with live traffic data and real-time GPS navigation for driving...</p>
-                        <div class="item-meta">
-                            
-                            <span class="meta-genre">Navigation</span>
-                            
-                            
-                            <span class="meta-price">Get</span>
-                            
-                            
-                            <span class="meta-date">2012-12-12</span>
+                            <span class="meta-date">2014-04-02</span>
                             
                         </div>
                     </div>
@@ -935,32 +1021,32 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/indeed-job-search/id309735670?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9b/d3/7f/9bd37fad-b49c-dd05-df46-f19ffc196221/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/300x300bb.png" 
-                                 alt="Indeed Job Search" 
+                        <a href="https://apps.apple.com/us/app/tea-dating-advice/id6444453051?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f7/1b/bd/f71bbd1a-835b-cee7-7635-90db8c3b0ed0/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/300x300bb.png" 
+                                 alt="Tea Dating Advice" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/indeed-job-search/id309735670?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Indeed Job Search
+                            <a href="https://apps.apple.com/us/app/tea-dating-advice/id6444453051?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Tea Dating Advice
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Indeed Inc.</p>
+                        <p class="item-artist">Tea Dating Advice Inc.</p>
                         
-                        <p class="item-description">Discover your next job opportunity on Indeed, the free job search app designed to connect you with better work anytime, anywhere. Forget the other job...</p>
+                        <p class="item-description">Tea was built for one mission: helping women date safely. For too long, women’s safety has been an afterthought in dating — we’re changing that. Tea o...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Business</span>
+                            <span class="meta-genre">Lifestyle</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2009-06-07</span>
+                            <span class="meta-date">2023-01-12</span>
                             
                         </div>
                     </div>
@@ -968,32 +1054,131 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/tiktok-videos-shop-live/id835599320?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/67/d2/05/67d2059a-d88e-4538-4e47-828c92d433e4/AppIcon_TikTok-0-0-1x_U007epad-0-1-0-0-85-220.png/300x300bb.png" 
-                                 alt="TikTok" 
+                        <a href="https://apps.apple.com/us/app/capcut-video-editor/id1500855883?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1f/ce/b2/1fceb221-c1f2-1b62-295b-f69211d4fa8d/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/300x300bb.png" 
+                                 alt="CapCut" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/tiktok-videos-shop-live/id835599320?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                TikTok
+                            <a href="https://apps.apple.com/us/app/capcut-video-editor/id1500855883?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                CapCut
                             </a>
                         </h3>
                         
-                        <p class="item-artist">TikTok Ltd.</p>
+                        <p class="item-artist">Bytedance Pte. Ltd</p>
                         
-                        <p class="item-description">TikTok is THE destination for mobile videos. On TikTok, short-form videos are exciting, spontaneous, and genuine. Whether you’re a sports fanatic, a p...</p>
+                        <p class="item-description">CapCut offers easy-to-use video editing functions, in-APP fonts and effects, advanced features such as keyframe animation, smooth slow-motion, chroma ...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Entertainment</span>
+                            <span class="meta-genre">Photo & Video</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2014-04-02</span>
+                            <span class="meta-date">2020-04-14</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/google-maps/id585027354?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/30/e7/e1/30e7e110-93a0-acbc-8821-250b2b51501b/logo_maps_ios_color-0-1x_U007emarketing-0-0-0-7-0-0-0-0-85-220-0.png/300x300bb.png" 
+                                 alt="Google Maps" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/google-maps/id585027354?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Google Maps
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Google</p>
+                        
+                        <p class="item-description">Explore and navigate the world with confidence using Google Maps. Find the best routes with live traffic data and real-time GPS navigation for driving...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Navigation</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2012-12-12</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/temu-shop-like-a-billionaire/id1641486558?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/34/a4/82/34a482ae-671d-1384-50f5-d04593d4dc6a/AppIcon-1x_U007emarketing-0-8-0-0-P3-85-220-0.png/300x300bb.png" 
+                                 alt="Temu: Shop Like a Billionaire" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/temu-shop-like-a-billionaire/id1641486558?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Temu: Shop Like a Billionaire
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Temu</p>
+                        
+                        <p class="item-description">Shop on Temu for exclusive offers. No matter what you're looking for, Temu has you covered, including fashion, home decor, handmade crafts, beauty & c...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Shopping</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2022-08-31</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/whatnot-shop-sell-connect/id1488269261?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2d/06/c8/2d06c80e-c570-27b7-2505-d9e17d3622a9/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/300x300bb.png" 
+                                 alt="Whatnot: Shop, Sell, Connect" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/whatnot-shop-sell-connect/id1488269261?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Whatnot: Shop, Sell, Connect
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Whatnot Inc.</p>
+                        
+                        <p class="item-description">Whatnot is the largest live shopping platform in the US, UK, and Europe - we’re a marketplace bringing millions together to shop, sell, and connect ar...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Shopping</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2019-12-06</span>
                             
                         </div>
                     </div>
@@ -1002,7 +1187,7 @@ body {
                 <article class="content-item">
                     <div class="item-image">
                         <a href="https://apps.apple.com/us/app/gmail-email-by-google/id422689480?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/71/b7/54/71b75414-486b-bf12-4d0a-3ad32b8a460c/logo_gmail_2020q4_color-0-1x_U007emarketing-0-0-0-7-0-0-0-0-85-220-0.png/300x300bb.png" 
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2f/6b/4b/2f6b4bb4-a959-e12a-8405-0140ca724ee7/logo_gmail_2020q4_color-0-1x_U007emarketing-0-0-0-7-0-0-0-0-85-220-0.png/300x300bb.png" 
                                  alt="Gmail" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
@@ -1034,32 +1219,98 @@ body {
                 
                 <article class="content-item">
                     <div class="item-image">
-                        <a href="https://apps.apple.com/us/app/whatnot-shop-sell-connect/id1488269261?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/21/a5/38/21a53829-d352-ca46-adca-e93ce5fc9489/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/300x300bb.png" 
-                                 alt="Whatnot: Shop, Sell, Connect" 
+                        <a href="https://apps.apple.com/us/app/indeed-job-search/id309735670?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/1c/2d/421c2d11-c697-19b9-8799-55db798f60cc/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/300x300bb.png" 
+                                 alt="Indeed Job Search" 
                                  loading="lazy"
                                  onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
                         </a>
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="https://apps.apple.com/us/app/whatnot-shop-sell-connect/id1488269261?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
-                                Whatnot: Shop, Sell, Connect
+                            <a href="https://apps.apple.com/us/app/indeed-job-search/id309735670?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Indeed Job Search
                             </a>
                         </h3>
                         
-                        <p class="item-artist">Whatnot Inc.</p>
+                        <p class="item-artist">Indeed Inc.</p>
                         
-                        <p class="item-description">Whatnot is the largest live shopping platform in the US, UK, and Europe - we’re a marketplace bringing millions together to shop, sell, and connect ar...</p>
+                        <p class="item-description">Discover your next job opportunity on Indeed, the free job search app designed to connect you with better work anytime, anywhere. Forget the other job...</p>
                         <div class="item-meta">
                             
-                            <span class="meta-genre">Shopping</span>
+                            <span class="meta-genre">Business</span>
                             
                             
                             <span class="meta-price">Get</span>
                             
                             
-                            <span class="meta-date">2019-12-06</span>
+                            <span class="meta-date">2009-06-07</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/microsoft-authenticator/id983156458?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2a/70/1c/2a701c72-8950-d547-c05d-5f8bf49180ad/AppIcon-0-1x_U007emarketing-0-11-0-sRGB-85-220-0.png/300x300bb.png" 
+                                 alt="Microsoft Authenticator" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/microsoft-authenticator/id983156458?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Microsoft Authenticator
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Microsoft Corporation</p>
+                        
+                        <p class="item-description">Use Microsoft Authenticator for easy, secure sign-ins for all your online accounts using multi-factor authentication, passwordless, or password autofi...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Productivity</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2015-05-30</span>
+                            
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="content-item">
+                    <div class="item-image">
+                        <a href="https://apps.apple.com/us/app/telegram-messenger/id686449807?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/f3/5e/99f35e1a-af53-9267-8d98-89838bab359a/AppIconLLC-0-0-1x_U007emarketing-0-8-0-85-220.png/300x300bb.png" 
+                                 alt="Telegram Messenger" 
+                                 loading="lazy"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;%23f0f0f0&quot;/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;14&quot; fill=&quot;%23999&quot; text-anchor=&quot;middle&quot; dy=&quot;.3em&quot;%3ENo Image%3C/text%3E%3C/svg%3E'" decoding="async">
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">
+                            <a href="https://apps.apple.com/us/app/telegram-messenger/id686449807?uo=2&at=10lPZf" target="_blank" rel="noopener noreferrer">
+                                Telegram Messenger
+                            </a>
+                        </h3>
+                        
+                        <p class="item-artist">Telegram FZ-LLC</p>
+                        
+                        <p class="item-description">Pure instant messaging — simple, fast, secure, and synced across all your devices. One of the top 5 most downloaded apps in the world with over 1 bill...</p>
+                        <div class="item-meta">
+                            
+                            <span class="meta-genre">Social Networking</span>
+                            
+                            
+                            <span class="meta-price">Get</span>
+                            
+                            
+                            <span class="meta-date">2013-08-14</span>
                             
                         </div>
                     </div>
