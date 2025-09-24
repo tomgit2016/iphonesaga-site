@@ -128,7 +128,7 @@
                 "position": 3,
                 "item": {
                         "@type": "CreativeWork",
-                        "name": "Top Books",
+                        "name": "Top Ebooks",
                         "description": "\u91d1\u8272\u306e\u30ac\u30c3\u30b7\u30e5!! 2\u3010\u5358\u8a71\u7248\u3011 Page 34",
                         "url": "https://iphonesaga.com/jp/Top_Ebooks.html",
                         "dateModified": "2025-09-14",
@@ -474,8 +474,31 @@
                 gap: 1px;
             }
             
+            .header {
+                background: none;
+                backdrop-filter: none;
+                box-shadow: none;
+                border: none;
+                padding: 1rem 0.5rem;
+                margin-bottom: 1.5rem;
+                min-height: auto;
+            }
+            
+            .header::before {
+                display: none;
+            }
+            
             .header h1 {
-                font-size: 2.5rem;
+                font-size: 1.1rem;
+                line-height: 1.3;
+                margin-bottom: 0.4rem;
+                text-shadow: none;
+            }
+            
+            .header p {
+                font-size: 0.85rem;
+                line-height: 1.3;
+                text-shadow: none;
             }
             
             .grid-item {
@@ -486,6 +509,21 @@
             .grid-item.featured {
                 min-height: 480px;
             }
+            
+            .country-icons {
+                gap: 0.5rem;
+            }
+            
+            .country-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.5rem;
+            }
+            
+            .country-selector {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -494,11 +532,42 @@
             }
             
             .header {
-                padding: 2rem 1rem;
+                background: none;
+                backdrop-filter: none;
+                box-shadow: none;
+                border: none;
+                padding: 0.75rem 0.25rem;
+                margin-bottom: 1.2rem;
+                min-height: auto;
+            }
+            
+            .header::before {
+                display: none;
             }
             
             .header h1 {
-                font-size: 2rem;
+                font-size: 0.95rem;
+                line-height: 1.2;
+                margin-bottom: 0.3rem;
+                letter-spacing: -0.3px;
+                text-shadow: none;
+            }
+            
+            .header p {
+                font-size: 0.75rem;
+                line-height: 1.3;
+                text-shadow: none;
+            }
+            
+            .country-icon {
+                width: 2rem;
+                height: 2rem;
+                font-size: 1.2rem;
+            }
+            
+            .country-selector {
+                margin-top: 0.75rem;
+                margin-bottom: 0.75rem;
             }
         }
     </style>
@@ -535,7 +604,7 @@
             <a href="Top_Ebooks.html" class="grid-item color-3 ">
                 <div class="grid-item-image" style="background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/6c/dc/44/6cdc4454-b258-779f-814d-8dc67943bace/BT000110217503403401900209.jpg/300x300bb.png');"></div>
                 <div class="grid-item-content">
-                    <h2>Top Books</h2>
+                    <h2>Top Ebooks</h2>
                     <p><strong><em>金色のガッシュ!! 2【単話版】 Page 34</em></strong></p>
                     <div class="date">Updated on September 14, 2025</div>
                 </div>
@@ -583,7 +652,7 @@
         </div>
         
         <div class="footer">
-            "Life is really simple, but men insist on making it complicated. " — Confucius
+            "Only he who has no use for the empire is fit to be entrusted with it." — Zhuangzi
         </div>
     </div>
 </body>

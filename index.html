@@ -373,6 +373,102 @@
             justify-content: center;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
             overflow: hidden;
+            font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+            font-weight: normal;
+        }
+        
+        /* Country-specific flag styles as fallbacks */
+        .country-icon.ca {
+            background: linear-gradient(to right, #ff0000 33%, #ffffff 33%, #ffffff 66%, #ff0000 66%);
+        }
+        
+        .country-icon.jp {
+            background: radial-gradient(circle at center, #bc002d 25%, #ffffff 25%);
+        }
+        
+        .country-icon.uk {
+            background: linear-gradient(45deg, #012169 25%, #ffffff 25%, #ffffff 50%, #ce1126 50%);
+        }
+        
+        .country-icon.au {
+            background: linear-gradient(to right, #00008b 50%, #ffffff 50%);
+        }
+        
+        .country-icon.fr {
+            background: linear-gradient(to right, #0055a4 33%, #ffffff 33%, #ffffff 66%, #ef4135 66%);
+        }
+        
+        .country-icon.de {
+            background: linear-gradient(to bottom, #000000 33%, #dd0000 33%, #dd0000 66%, #ffce00 66%);
+        }
+        
+        /* Fallback styles when emojis aren't supported */
+        .no-emoji-support .flag-emoji {
+            display: none !important;
+        }
+        
+        .no-emoji-support .flag-text {
+            display: block !important;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #333;
+            text-shadow: none;
+        }
+        
+        /* Enhanced flag backgrounds for better visibility when no emoji */
+        .no-emoji-support .country-icon {
+            position: relative;
+        }
+        
+        .no-emoji-support .country-icon.ca {
+            background: linear-gradient(to right, #ff0000 25%, #ffffff 25%, #ffffff 75%, #ff0000 75%);
+            border: 2px solid #ff0000;
+        }
+        
+        .no-emoji-support .country-icon.jp {
+            background: #ffffff;
+            border: 2px solid #bc002d;
+        }
+        
+        .no-emoji-support .country-icon.jp {
+            position: relative;
+        }
+        
+        .no-emoji-support .country-icon.jp::before {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            background: #bc002d;
+            border-radius: 50%;
+            top: 20%;
+            left: 20%;
+            z-index: 0;
+        }
+        
+        .no-emoji-support .country-icon.jp .flag-text {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .no-emoji-support .country-icon.uk {
+            background: #012169;
+            border: 2px solid #ce1126;
+        }
+        
+        .no-emoji-support .country-icon.au {
+            background: linear-gradient(to right, #00008b 40%, #ffffff 40%, #ffffff 60%, #00008b 60%);
+            border: 2px solid #00008b;
+        }
+        
+        .no-emoji-support .country-icon.fr {
+            background: linear-gradient(to right, #0055a4 33%, #ffffff 33%, #ffffff 67%, #ef4135 67%);
+            border: 2px solid #0055a4;
+        }
+        
+        .no-emoji-support .country-icon.de {
+            background: linear-gradient(to bottom, #000000 33%, #dd0000 33%, #dd0000 67%, #ffce00 67%);
+            border: 2px solid #000000;
         }
         
         .country-icon:hover {
@@ -591,23 +687,29 @@
                         <!-- Country Selection Icons -->
             <div class="country-selector">
                 <div class="country-icons">
-                    <a href="ca/" class="country-icon" title="Canada">
-                        🇨🇦
+                    <a href="ca/" class="country-icon ca" title="Canada">
+                        <span class="flag-emoji">🇨🇦</span>
+                        <span class="flag-text" style="display: none;">CA</span>
                     </a>
-                    <a href="jp/" class="country-icon" title="Japan">
-                        🇯🇵
+                    <a href="jp/" class="country-icon jp" title="Japan">
+                        <span class="flag-emoji">🇯🇵</span>
+                        <span class="flag-text" style="display: none;">JP</span>
                     </a>
-                    <a href="uk/" class="country-icon" title="United Kingdom">
-                        🇬🇧
+                    <a href="uk/" class="country-icon uk" title="United Kingdom">
+                        <span class="flag-emoji">🇬🇧</span>
+                        <span class="flag-text" style="display: none;">UK</span>
                     </a>
-                    <a href="au/" class="country-icon" title="Australia">
-                        🇦🇺
+                    <a href="au/" class="country-icon au" title="Australia">
+                        <span class="flag-emoji">🇦🇺</span>
+                        <span class="flag-text" style="display: none;">AU</span>
                     </a>
-                    <a href="fr/" class="country-icon" title="France">
-                        🇫🇷
+                    <a href="fr/" class="country-icon fr" title="France">
+                        <span class="flag-emoji">🇫🇷</span>
+                        <span class="flag-text" style="display: none;">FR</span>
                     </a>
-                    <a href="de/" class="country-icon" title="Germany">
-                        🇩🇪
+                    <a href="de/" class="country-icon de" title="Germany">
+                        <span class="flag-emoji">🇩🇪</span>
+                        <span class="flag-text" style="display: none;">DE</span>
                     </a>
                 </div>
             </div>
@@ -718,5 +820,63 @@
             "Reality is the leading cause of stress among those in touch with it." — Lily Tomlin
         </div>
     </div>
+    <script>
+        // Function to detect emoji support
+        function supportsEmoji() {
+            // Create a test canvas
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = canvas.height = 10;
+            
+            // Try to draw a flag emoji
+            context.textBaseline = 'top';
+            context.font = '10px Arial';
+            context.fillText('🇨🇦', 0, 0);
+            
+            // If emoji is supported, the canvas should have some pixel data
+            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+            const pixels = imageData.data;
+            
+            // Check if any pixels are non-zero (indicating emoji was rendered)
+            for (let i = 0; i < pixels.length; i += 4) {
+                if (pixels[i] !== 0 || pixels[i + 1] !== 0 || pixels[i + 2] !== 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        // Alternative method using user agent detection
+        function isWindowsWithoutEmojiSupport() {
+            const ua = navigator.userAgent;
+            const isWindows = ua.indexOf('Windows') !== -1;
+            const isOldWindows = ua.indexOf('Windows NT 6.') !== -1 || ua.indexOf('Windows NT 5.') !== -1;
+            const isOldIE = ua.indexOf('MSIE') !== -1 || ua.indexOf('Trident') !== -1;
+            
+            return isWindows && (isOldWindows || isOldIE);
+        }
+        
+        // Apply fallback styles if needed
+        function applyEmojiSupport() {
+            // Check both methods
+            const canvasSupportsEmoji = supportsEmoji();
+            const likelyUnsupported = isWindowsWithoutEmojiSupport();
+            
+            // If either method suggests no emoji support, use fallback
+            if (!canvasSupportsEmoji || likelyUnsupported) {
+                document.body.classList.add('no-emoji-support');
+                console.log('Emoji support not detected, using text fallbacks');
+            } else {
+                console.log('Emoji support detected');
+            }
+        }
+        
+        // Run detection when page loads
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', applyEmojiSupport);
+        } else {
+            applyEmojiSupport();
+        }
+    </script>
 </body>
 </html>
