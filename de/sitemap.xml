@@ -6,45 +6,57 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://iphonesaga.com/de/</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/de/ca/</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/de/jp/</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/de/uk/</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/de/au/</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/de/fr/</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/de/de/</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://iphonesaga.com/de/Top_Audio_Books.html</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iphonesaga.com/de/Top_TV_Episodes.html</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://iphonesaga.com/de/Top_Free_Apps.html</loc>
@@ -103,18 +115,6 @@
   <url>
     <loc>https://iphonesaga.com/de/Top_Free_Mac_Apps.html</loc>
     <lastmod>2025-10-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://iphonesaga.com/de/Top_Audio_Books.html</loc>
-    <lastmod>2025-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://iphonesaga.com/de/Top_TV_Episodes.html</loc>
-    <lastmod>2025-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
